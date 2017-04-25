@@ -13,6 +13,6 @@ This is the native library
 
 There are a few differen t ways to do this, managed and native
 
-[Managed Sample](managed\managedsample.md)
+[Managed Sample](managed/managedsample.md)
 
-[Native Sample](native\nativesample.md)
+[Native Sample](native/nativesample.md)
