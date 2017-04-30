@@ -24,9 +24,11 @@
 
 5. Add following macro to your code
 
-  ==================================================   
+===================================================
+
   Begin of modifications to the original program in order to display notifications.
-  ==================================================   
+
+  =================================================== 
 
 #define USE_APPESTEEM_SRCL 
 
