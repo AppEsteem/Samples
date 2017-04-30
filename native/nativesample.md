@@ -16,11 +16,11 @@
 
 **Follow steps below to link SRCL to application.** 
 1. Copy bin folder and add as an additional library for the linker.
-* To do this go to Visual studio SolutionExplorer right click on your application and select properties -> Linker tab -> Additional Library directories and type bin 
+* To do this go to Visual studio Solution Explorer, right click on your application and select properties -> Linker tab -> Additional Library directories and provide path for the "bin" folder
 2. Copy srcl.h, lib_srcl_autolink.h to include folder. 
 3. Copy srcl_init.cpp, registration.cpp (downloaded seal) to the source folder.  
 4. If you are using precompiled headers in your project, configure the source/srcl_init.cpp file as not using precompiled headers.
-* To do this go to Visual studio SolutionExplorer right click on your application and select properties -> C++ tab -> Precompiled Headers -> Precompiled Header and select Not Using Precompiled Headers.
+* To do this go to Visual studio Solution Explorer right click on your application and select properties -> C++ tab -> Precompiled Headers -> Precompiled Header and select Not Using Precompiled Headers.
 
 5. Add following macro to your code
   ==================================================   
