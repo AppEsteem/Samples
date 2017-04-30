@@ -1,12 +1,12 @@
 
-### How to use AppEsteem's Self Regulationg Client Library
+### How to use AppEsteem's Self Regulating Client Library
 **Pre requisites:** *Visualstudio_ 2010* and *later*
 
 > Steps to download and link vendor application to SRCL library:
 
 **Downloading SRCL library:**
 1. Login to our portal [appesteem] <https://customer.appesteem.com/>
-2. Download SRCL library.(SRCL can be downoaded after company and application is registered successfully with AppEsteem).
+2. Download SRCL library.(SRCL can be downloaded after company and application is registered successfully with AppEsteem).
 3. After successful download in provided zip file make sure you have following folders.
     * Bin (library files to be linked to the application) 
     * Example (Shows how to use library) 
@@ -15,14 +15,18 @@
 4. Download seal from appesteem portal(or may be for now provided as part of zip file).
 
 **Follow steps below to link SRCL to application.** 
-1. Copy bin folder and as an additional library for the linker.
+1. Copy bin folder and add as an additional library for the linker.
+* To do this go to Visual studio SolutionExplorer right click on your application and select properties -> Linker tab -> Additional Library directories and type bin 
 2. Copy srcl.h, lib_srcl_autolink.h to include folder. 
 3. Copy srcl_init.cpp, registration.cpp (downloaded seal) to the source folder.  
 4. If you are using precompiled headers in your project, configure the source/srcl_init.cpp file as not using precompiled headers.
-5. Add following macro to your code.
- ========================================   
+* To do this go to Visual studio SolutionExplorer right click on your application and select properties -> C++ tab -> Precompiled Headers -> Precompiled Header and select Not Using Precompiled Headers.
+
+5. Add following macro to your code
+  ==================================================   
   Begin of modifications to the original program in order to display notifications.
-  ======================================   
+  ==================================================   
+
 #define USE_APPESTEEM_SRCL 
 
 #ifdef USE_APPESTEEM_SRCL 
