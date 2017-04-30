@@ -53,3 +53,4 @@ End of modifications to the original program in order to display notifications.
 
 7. You can also check examples on how to use SRCL in your application.
 8. Build application after finishing all the steps above.
+9. Now run the application and we should be able to see the notications/Telemetry sent from SRCL client.
