@@ -1,4 +1,4 @@
-# AppEsteem Sample Repisotory
+# AppEsteem Sample Repository
 
 This repository contains samples for using the AppEsteem SDK. It has detailed instructions and samples show how to use the different AppEsteem components within  your application.
 
@@ -11,11 +11,13 @@ Both versions of the library will be made available on [NuGet](http://www.nuget.
 
 ### Integrate with your code
 
-There are a few differen to ways to do this, managed and native
+There are a few different to ways to do this, managed, native, and chrome
 
 [Managed Sample](managed/managedsample.md)
 
 [Native Sample](native/nativesample.md)
+
+[Chrome Extension Sample](chrome/chromesample.md)
 
 ### Validate a seal
 
@@ -24,3 +26,5 @@ While the concepts of validating the seal are the same for both managed and nati
 [Managed](managed/validateseal.md)
 
 [Native](native/validateseal.md)
+
+[Chrome](chrome/validateseal.md)

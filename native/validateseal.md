@@ -201,5 +201,6 @@ This section contains a property named **files** that is an array of information
 1. Extract the contents of the section and XXX
 1. After obtaining the JSON text, compute the SHA256 value of the contents of the **seal** property, including the starting and ending brackets
 1. Use the base64 encoded value of the **X509Cert** property to create a certificate
+1. Validate that the certificate has the common name of "AppEsteem Corporation" and matches the certificates listed at TODO
 1. Sign the digest using the RS256 (RSASSA-PKCS-v1_5) and the certificate and compare the resulting signatures. If they match, the value of the seal is the same as what AppEsteem has certified. If they do not match, then the seal is not valid.
 
