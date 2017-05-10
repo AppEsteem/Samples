@@ -197,10 +197,89 @@ This section contains a property named **files** that is an array of information
 
 ## Validating the seal
 
-1. A native application will contain a section with the name of '**AESeal**',this section contains the seal in it's binary form.
-1. Extract the contents of the section and XXX
-1. After obtaining the JSON text, compute the SHA256 value of the contents of the **seal** property, including the starting and ending brackets
-1. Use the base64 encoded value of the **X509Cert** property to create a certificate
-1. Validate that the certificate has the common name of "AppEsteem Corporation" and matches the certificates listed at TODO
-1. Sign the digest using the RS256 (RSASSA-PKCS-v1_5) and the certificate and compare the resulting signatures. If they match, the value of the seal is the same as what AppEsteem has certified. If they do not match, then the seal is not valid.
+1. A native application will contain a section with the name of '**AESeal**', this section contains the JSON seal and nothing else.
+After obtaining the JSON text you have to verify that the certificate in the header has a trusted certificate chain and that it was issued to AppEsteem. Then you must validate that the signature in the header is that of the of the seal section:
+1. Use the base64 encoded value of the **X509Cert** property to obtain the signing certificate (ASN encoded)
+   Pseudocode example:
+     CryptStringToBinaryA(szCertificate, nCertificateLength, CRYPT_STRING_BASE64, certificate_bytes, &certificate_size, NULL, NULL);
+     PCCERT_CONTEXT cert_context = CertCreateCertificateContext(X509_ASN_ENCODING | PKCS_7_ASN_ENCODING, certificate_bytes, certificate_size);
 
+2. Validate that the certificate has a trusted certificate chain and it is not self signed.
+   Pseudocode example:
+        CERT_CHAIN_PARA ChainPara = { 0 };
+        ChainPara.cbSize = sizeof(ChainPara);
+        PCCERT_CHAIN_CONTEXT pChainContext = NULL;
+        CertGetCertificateChain(NULL, cert_context, NULL, NULL, &ChainPara, CERT_CHAIN_REVOCATION_CHECK_CHAIN_EXCLUDE_ROOT, NULL, &pChainContext);
+        CERT_CHAIN_POLICY_PARA ChainPolicy = { 0 };
+        ChainPolicy.cbSize = sizeof(ChainPolicy);
+        ChainPolicy.dwFlags = CERT_CHAIN_POLICY_IGNORE_NOT_TIME_NESTED_FLAG;
+        ChainPolicy.pvExtraPolicyPara = NULL; // base policy
+        CERT_CHAIN_POLICY_STATUS PolicyStatus = { 0 };
+        PolicyStatus.cbSize = sizeof(PolicyStatus);
+        CertVerifyCertificateChainPolicy(CERT_CHAIN_POLICY_BASE, pChainContext, &ChainPolicy, &PolicyStatus);
+        bool valid_chain = PolicyStatus.dwError == S_OK || PolicyStatus.dwError == CRYPT_E_NO_REVOCATION_CHECK || PolicyStatus.dwError == CRYPT_E_REVOCATION_OFFLINE;
+
+3. Validate that the certificate has the common name of "AppEsteem Corporation" and the serial number is one of those listed at TODO
+   Pseudocode example:
+        DWORD str_type = CERT_X500_NAME_STR;
+        DWORD size = ::CertGetNameStringW(cert_context, CERT_NAME_RDN_TYPE, CERT_NAME_DISABLE_IE4_UTF8_FLAG, &str_type, NULL, 0);
+        LPWSTR subject = (LPWSTR)LocalAlloc(0, size * sizeof(WCHAR));
+        size = ::CertGetNameStringW(cert_context, CERT_NAME_RDN_TYPE, CERT_NAME_DISABLE_IE4_UTF8_FLAG, &str_type, subject, size);
+        // subject must contain "AppEsteem Corporation"
+
+        std::string serial;
+        serial.reserve(2 * cert_context->pCertInfo->SerialNumber.cbData);
+        for (DWORD i = cert_context->pCertInfo->SerialNumber.cbData; i != 0; i--)
+        {
+            char buf[3];
+            BYTE b = *(cert_context->pCertInfo->SerialNumber.pbData + i - 1);
+            sprintf_s(buf, sizeof(buf), "%02x", b);
+            serial += buf;
+        }
+        // serial must be listed at TODO
+
+4. Compute the SHA256 value of the contents of the **seal** property, including the starting and ending brackets
+   Pseudocode example:
+        HCRYPTPROV hProv;
+        CryptAcquireContext(&hProv, NULL, NULL, PROV_RSA_AES, CRYPT_VERIFYCONTEXT);
+        HCRYPTHASH hHash;
+        CryptCreateHash(hProv, CALG_SHA_256, 0, 0, &hHash);
+        CryptHashData(hHash, seal_text, seal_text_length, 0);
+
+5. Use the public key in the certificate to validate that the signature in the header (RSASSA-PKCS-v1_5 format) is that of the calculated digest. If it is, the value of the seal is the same as what AppEsteem has certified. If they do not match, then the seal is not valid.
+   Pseudocode example:
+        DWORD size = 0;
+        CryptBinaryToStringA(cert_context->pCertInfo->SubjectPublicKeyInfo.PublicKey.pbData + 9, cert_context->pCertInfo->SubjectPublicKeyInfo.PublicKey.cbData - 9 - 2, CRYPT_STRING_BASE64 | CRYPT_STRING_NOCRLF, NULL, &size);
+        CHAR key[str_size];
+        CryptBinaryToStringA(cert_context->pCertInfo->SubjectPublicKeyInfo.PublicKey.pbData + 9, cert_context->pCertInfo->SubjectPublicKeyInfo.PublicKey.cbData - 9 - 2, CRYPT_STRING_BASE64 | CRYPT_STRING_NOCRLF, str, &size);
+        key[size - 6] = '=';
+        key[size - 5] = '=';
+        key[size - 4] = '=';
+        key[size - 3] = 0;
+
+        unsigned char der_key[4096 / 8];
+        DWORD der_key_size = sizeof(der_key);
+        CryptStringToBinaryA(key, size-3, CRYPT_STRING_BASE64, der_key, &der_key_size, NULL, NULL);
+        std::reverse(der_key, der_key + der_key_size);
+        unsigned char der_signature[4096 / 8];
+        DWORD der_signature_size = sizeof(der_signature);
+        CryptStringToBinaryA(signature, signature_length, CRYPT_STRING_BASE64, der_signature, &der_signature_size, NULL, NULL);
+        std::reverse(der_signature, der_signature + der_signature_size);
+
+        RSAKEY rsa_pub_key;
+        rsa_pub_key.header.bType = PUBLICKEYBLOB;
+        rsa_pub_key.header.bVersion = CUR_BLOB_VERSION;
+        rsa_pub_key.header.reserved = 0;
+        rsa_pub_key.header.aiKeyAlg = CALG_RSA_KEYX;
+        rsa_pub_key.pub_key.magic = 0x31415352;
+        rsa_pub_key.pub_key.bitlen = der_key_size * 8;
+        rsa_pub_key.pub_key.pubexp = 65537;
+        memcpy(rsa_pub_key.n, der_key, der_key_size);
+        HCRYPTPROV hProv;
+        CryptAcquireContext(&hProv, NULL, NULL, PROV_RSA_AES, CRYPT_VERIFYCONTEXT);
+        HCRYPTKEY hPubKey;
+        CryptImportKey(hProv, (BYTE*)&rsa_pub_key, sizeof(BLOBHEADER) + sizeof(RSAPUBKEY) + der_key_size, 0, 0, &hPubKey);
+        if (CryptVerifySignature(hHash, der_signature, der_signature_size, hPubKey, NULL, 0))
+        {
+            // signature valid
+        }
