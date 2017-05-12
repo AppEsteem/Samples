@@ -1,12 +1,13 @@
 # Validating an AppEsteem seal
 
+**IMPORTANT NOTE** - _Please read_
+***
+It is _very important_ to note that seals can be used in two ways. Having a seal within application doesn't mean that AppEsteem has certified that application. Vendors are able to create a seal without the application being certified by AppEsteem for testing purposes and evaluation. It is critically important when validating a seal to check the **certification** property within the *attestation* section. AppEsteem certified applications will have the value 'yes'. If the property is 'no' or the property is not present, the application **must not** be be considered certified by AppEsteem.
+
+***
 ## What is a seal
 
 A seal is a block of JSON containing information that AppEsteem is certifying about the application containing the seal. An example of a complete seal is shown below. Take a look at the complete seal, then we'll continue with details of each section.
-
-** IMPORTANT NOTE **
-
-It is very important to note that seals can be used in two ways, having a seal present doesn't mean that AppEsteem has certified that application. Vendors are able to create a seal without it being certified by AppEsteem for testing purposes. An important part of validating a seal is to check the **certification** property within the *attestation* section. AppEsteem certified applications will have the value 'yes'. If the property is 'no' or not present, the application should be be considered certified by AppEsteem.
 
 ```json
 {
