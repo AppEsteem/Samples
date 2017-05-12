@@ -197,15 +197,17 @@ This section contains a property named **files** that is an array of information
 
 ## Validating the seal
 
-1. A native application will contain a section with the name of '**AESeal**', this section contains the JSON seal and nothing else.
-After obtaining the JSON text you have to verify that the certificate in the header has a trusted certificate chain and that it was issued to AppEsteem. Then you must validate that the signature in the header is that of the of the seal section:
-1. Use the base64 encoded value of the **X509Cert** property to obtain the signing certificate (ASN encoded)
+1. A native application will contain a section with the name of '**AESeal**', this section contains the JSON seal and nothing else. After obtaining the JSON text you have to verify that the certificate in the header has a trusted certificate chain and that it was issued to AppEsteem. Then you must validate that the signature in the header is that of the of the seal section:
+   1. Use the base64 encoded value of the **X509Cert** property to obtain the signing certificate (ASN encoded)
    Pseudocode example:
+
+   ```C++
      CryptStringToBinaryA(szCertificate, nCertificateLength, CRYPT_STRING_BASE64, certificate_bytes, &certificate_size, NULL, NULL);
      PCCERT_CONTEXT cert_context = CertCreateCertificateContext(X509_ASN_ENCODING | PKCS_7_ASN_ENCODING, certificate_bytes, certificate_size);
+   ```
 
-2. Validate that the certificate has a trusted certificate chain and it is not self signed.
-   Pseudocode example:
+   2. Validate that the certificate has a trusted certificate chain and it is not self signed. Pseudocode example: 
+   ```C++
         CERT_CHAIN_PARA ChainPara = { 0 };
         ChainPara.cbSize = sizeof(ChainPara);
         PCCERT_CHAIN_CONTEXT pChainContext = NULL;
@@ -218,9 +220,11 @@ After obtaining the JSON text you have to verify that the certificate in the hea
         PolicyStatus.cbSize = sizeof(PolicyStatus);
         CertVerifyCertificateChainPolicy(CERT_CHAIN_POLICY_BASE, pChainContext, &ChainPolicy, &PolicyStatus);
         bool valid_chain = PolicyStatus.dwError == S_OK || PolicyStatus.dwError == CRYPT_E_NO_REVOCATION_CHECK || PolicyStatus.dwError == CRYPT_E_REVOCATION_OFFLINE;
+   ```
 
-3. Validate that the certificate has the common name of "AppEsteem Corporation" and the serial number is one of those listed at TODO
-   Pseudocode example:
+   3. Validate that the certificate has the common name of "AppEsteem Corporation" and the serial number is one of those listed at **TODO**. Pseudocode example:
+
+   ```C++
         DWORD str_type = CERT_X500_NAME_STR;
         DWORD size = ::CertGetNameStringW(cert_context, CERT_NAME_RDN_TYPE, CERT_NAME_DISABLE_IE4_UTF8_FLAG, &str_type, NULL, 0);
         LPWSTR subject = (LPWSTR)LocalAlloc(0, size * sizeof(WCHAR));
@@ -237,17 +241,21 @@ After obtaining the JSON text you have to verify that the certificate in the hea
             serial += buf;
         }
         // serial must be listed at TODO
+   ```
 
-4. Compute the SHA256 value of the contents of the **seal** property, including the starting and ending brackets
-   Pseudocode example:
+   4. Compute the SHA256 value of the contents of the **seal** property, including the starting and ending brackets. Pseudocode example:
+
+   ```C++
         HCRYPTPROV hProv;
         CryptAcquireContext(&hProv, NULL, NULL, PROV_RSA_AES, CRYPT_VERIFYCONTEXT);
         HCRYPTHASH hHash;
         CryptCreateHash(hProv, CALG_SHA_256, 0, 0, &hHash);
         CryptHashData(hHash, seal_text, seal_text_length, 0);
+   ```
 
-5. Use the public key in the certificate to validate that the signature in the header (RSASSA-PKCS-v1_5 format) is that of the calculated digest. If it is, the value of the seal is the same as what AppEsteem has certified. If they do not match, then the seal is not valid.
-   Pseudocode example:
+   5. Use the public key in the certificate to validate that the signature in the header (RSASSA-PKCS-v1_5 format) is that of the calculated digest. If it is, the value of the seal is the same as what AppEsteem has certified. If they do not match, then the seal is not valid. Pseudocode example:
+
+   ```C++
         DWORD size = 0;
         CryptBinaryToStringA(cert_context->pCertInfo->SubjectPublicKeyInfo.PublicKey.pbData + 9, cert_context->pCertInfo->SubjectPublicKeyInfo.PublicKey.cbData - 9 - 2, CRYPT_STRING_BASE64 | CRYPT_STRING_NOCRLF, NULL, &size);
         CHAR key[str_size];
@@ -283,3 +291,4 @@ After obtaining the JSON text you have to verify that the certificate in the hea
         {
             // signature valid
         }
+   ```
