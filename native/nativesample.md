@@ -14,20 +14,20 @@ _**Downloading AppEsteem SRCL Library**_
  Manage Nuget Package for solution.
 2) Select Browse and search for appesteem.You should be able to see AppEsteem.SRCL.CPP listed.
 
-    ![GitHub Logo](../media/FindPackage_1.png)
+    ![GitHub Logo](../media/cpp_FindPackage_1.png)
 3) Select the application to be linked to AppEsteem SRCL Library and click install button.
 
-    ![GitHub Logo](../media/InstallPackage_2.png)
+    ![GitHub Logo](../media/cpp_InstallPackage_2.png)
 5) A screen will be displayed to Review changes and to proceed with installation.
 
-    ![GitHub Logo](../media/ReviewChanges_3.png)
+    ![GitHub Logo](../media/cpp_ReviewChanges_3.png)
 6) Select OK button to continue.
 7) We can now see the message on the screen that the installation is  finished.
 
-    ![GitHub Logo](../media/InstallMessage_4.png)
+    ![GitHub Logo](../media/cpp_InstallMessage_4.png)
 8) From NuGet package solution we can now see the AppEsteem SRCL checked and uninstall button enabled.
 
-    ![GitHub Logo](../media/InstallVerification_5.png)
+    ![GitHub Logo](../media/cpp_InstallVerification_5.png)
 9) Include the seal(registration.cpp) obtained from AppEsteem to the application source files.
 10) Build the application with seal included.
 11) Now when the application is run SRCL library should be able to send notifications/Telemetry to  the server.
