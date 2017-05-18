@@ -39,6 +39,7 @@ void _tmain(int argc, TCHAR *argv[])
 		return;
 	}
 
+	Sleep(30000);
 	// Wait until child process exits.
 	WaitForSingleObject(pi.hProcess, INFINITE);
 
