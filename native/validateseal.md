@@ -203,7 +203,7 @@ A native application will contain a section with the name of '**AESeal**', this 
 2. The certificate in the header was issued to AppEsteem.
 3. The signature in the header is that of the of the seal section:
 
-1. Verify that the certificate in the header has a trusted certificate chain:
+\1. Verify that the certificate in the header has a trusted certificate chain:
    a. Use the base64 encoded value of the **X509Cert** property to obtain the signing certificate (ASN encoded)
       Pseudocode example:
 
