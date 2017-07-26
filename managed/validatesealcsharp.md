@@ -11,146 +11,13 @@ A seal is a block of JSON containing information that AppEsteem is certifying ab
 
 ```json
 {
-  "header": {
-    "signature": "cNKzRy3XiT8Q/BQCugNVuwslmllSZ624miM9q/sKeFnlAkFhEX0Te4vFlgQFqEPj2aCFCmYGpVOvAQXP4pcIZ8/HHci9hgeORXQ1k2L1pd6TobpwRcHj1YiiiKV0JJTbvATFH2C5nD3pL7/R5mN5v7UG+a41wrA/W8M9W4DfgltzKVPauoDCPQq3TxwSNaSJ/LxnsmvFCNl+RjS0uiYKYzgl1ziB1QAIJDCZmhaMKxpUBcWSA7SAEDAVLII78FO/Vtm/eBDZHbp5mOg+nHrblJCfBhncVApB+Otp20QhaIwlG+AY22Xefgcnd3Kj0PM9739OQZ9+wJOAB+TXhedh4w==",
-    "x509Cert": "MIIFMjCCBBqgAwIBAgIIOqyFx1PbMFQwDQYJKoZIhvcNAQELBQAwgbQxCzAJBgNVBAYTAlVTMRAwDgYDVQQIEwdBcml6b25hMRMwEQYDVQQHEwpTY290dHNkYWxlMRowGAYDVQQKExFHb0RhZGR5LmNvbSwgSW5jLjEtMCsGA1UECxMkaHR0cDovL2NlcnRzLmdvZGFkZHkuY29tL3JlcG9zaXRvcnkvMTMwMQYDVQQDEypHbyBEYWRkeSBTZWN1cmUgQ2VydGlmaWNhdGUgQXV0aG9yaXR5IC0gRzIwHhcNMTYwNzIwMjIwNDM4WhcNMTcwNzIwMjIwNDM4WjA9MSEwHwYDVQQLExhEb21haW4gQ29udHJvbCBWYWxpZGF0ZWQxGDAWBgNVBAMMDyouYXBwZXN0ZWVtLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALseD/te6Z4YbOj0Iz7LzNi187AydQkykiwMWgPSpgkmCubkfY0rlytkG0gjdLYiOBhrlKCHB8jBl+fgebRaGZejwaIacjJxaK+xqBj1zfiwImyWwXtJed6kvWmKRIQTDHXuiZkodzwvqqHlicFwYGvrCsZDl8kv2QJD7HjwS3qNphk4oerZ7OWog2qdNTs9MAa8aXU/DOIzdQTcC//nrKk6VNxvmQCC2aLMnCekUplyrOkv2EjDsP1mRkWkcByZdafQ3FSxyjEH+irQhrrQiZMb0AMBfpyDaZ4BxRExNrMyQygpiBBEFG9+XPt0rugB4Q7GkkeaBBGB3lFI5Hnj+N0CAwEAAaOCAbwwggG4MAwGA1UdEwEB/wQCMAAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMA4GA1UdDwEB/wQEAwIFoDA3BgNVHR8EMDAuMCygKqAohiZodHRwOi8vY3JsLmdvZGFkZHkuY29tL2dkaWcyczEtMjcwLmNybDBdBgNVHSAEVjBUMEgGC2CGSAGG/W0BBxcBMDkwNwYIKwYBBQUHAgEWK2h0dHA6Ly9jZXJ0aWZpY2F0ZXMuZ29kYWRkeS5jb20vcmVwb3NpdG9yeS8wCAYGZ4EMAQIBMHYGCCsGAQUFBwEBBGowaDAkBggrBgEFBQcwAYYYaHR0cDovL29jc3AuZ29kYWRkeS5jb20vMEAGCCsGAQUFBzAChjRodHRwOi8vY2VydGlmaWNhdGVzLmdvZGFkZHkuY29tL3JlcG9zaXRvcnkvZ2RpZzIuY3J0MB8GA1UdIwQYMBaAFEDCvSeOzDSDMKIz1/tss/C0LIDOMCkGA1UdEQQiMCCCDyouYXBwZXN0ZWVtLmNvbYINYXBwZXN0ZWVtLmNvbTAdBgNVHQ4EFgQU57qMDbG+clb8NyNO3TkzgJtX6Y0wDQYJKoZIhvcNAQELBQADggEBAAQ2bxnE6DzrAl+MawZKcAKmh5jMe8z7gErlrdXf08HC49dogNug+IWPTEajOWAvWHX75qBzG/mB6kfJW+OVdzFykV9A2b6xFS1e5ekUf3N3BqCcJUebzwWHbJqKiK6GJdSZaM64gg3B+PwxcqEQHpqzf5IkQ+xItv/XEk9B3/+CjY402JEeZwtgH/KUsUV4kF/g1Jus7Q/4NU2pNJCBht6LCbjHrDW0H4BBZvLe5fkHBfHlo3QL72sp0icmn3meXkBX7vwtw7DClFZQylXvLAtPTFr1/FCa0cnPbyHijcoaYV5ALf1TXTXX84Nkal/i1vrgbYgSztm272zS75TyCGA="
-  },
-  "seal": {
-    "applicationIdentification": {
-      "appId": "00000000-0000-0000-0000-000000000002",
-      "sealId": "161104-PEF-DRVHQ-00001",
-      "applicationType": "pe"
-    },
-    "attestations": {
-      "address": "7600 Capital of Texas Highway, Building B, Suite 350, Austin, TX 78731",
-      "certification": "yes",
-      "valueProposition": "Driver recommendation and update services including performance optimizations.",
-      "age": "Child appropriate",
-      "audience": [
-        "Consumer"
-      ],
-      "category": [
-        "SysTools & Utilities"
-      ],
-      "monetization": [
-        "Paid",
-        "Up-sell"
-      ],
-      "target": [
-        "Windows XP",
-        "Windows Vista",
-        "Windows 7",
-        "Windows 8",
-        "Windows 10"
-      ]
-    },
-    "validDates": {
-      "validForFilesSignedAfter": "2016-11-03T00:00:00+00:00",
-      "validForFilesSignedBefore": "2017-11-03T00:00:00+00:00"
-    },
-    "distribution": {
-      "whitelist": {
-        "landingPages": [
-          "http://download.driversupport.com/lp/*/*",
-          "http://www.driversupport.com/"
-        ],
-        "downloadUrls": [
-          "http://cdn.driversupport.com/builds/v10/nsis/driversupport/DriverSupport.exe",
-          "https://secure.driversupport.com/direct/driversupport/driversupport.exe"
-        ]
-      }
-    },
-    "contents": {
-      "files": [
-        {
-          "name": "DriverSupport.exe",
-          "majorVersion": "10",
-          "thumbprint": "1a7acd613247312b73a6f91156a4cc4c2a8b19c5",
-          "vendor": "PC Drivers Headquarters, LP"
-        },
-        {
-          "name": "DriverSupportApp.exe",
-          "majorVersion": "10",
-          "thumbprint": "1a7acd613247312b73a6f91156a4cc4c2a8b19c5",
-          "vendor": "PC Drivers Headquarters, LP"
-        },
-        {
-          "name": "DriverSupportUpdater.exe",
-          "majorVersion": "10",
-          "thumbprint": "1a7acd613247312b73a6f91156a4cc4c2a8b19c5",
-          "vendor": "PC Drivers Headquarters, LP"
-        },
-        {
-          "name": "Agent.CPU.exe",
-          "majorVersion": "10",
-          "thumbprint": "1a7acd613247312b73a6f91156a4cc4c2a8b19c5",
-          "vendor": "PC Drivers Headquarters, LP"
-        },
-        {
-          "name": "ISUninstall.exe",
-          "majorVersion": "1",
-          "thumbprint": "5ccc0781ad2dffac626a04f1839fe8807909fb77",
-          "vendor": "PC Drivers Headquarters, LP"
-        },
-        {
-          "name": "Uninstall.exe",
-          "majorVersion": "1",
-          "thumbprint": "5ccc0781ad2dffac626a04f1839fe8807909fb77",
-          "vendor": "PC Drivers Headquarters, LP"
-        },
-        {
-          "name": "DriverSupportAO.exe",
-          "majorVersion": "1",
-          "thumbprint": "5ccc0781ad2dffac626a04f1839fe8807909fb77",
-          "vendor": "PC Drivers Headquarters, LP"
-        },
-        {
-          "name": "DriverSupportAOsvc.exe",
-          "majorVersion": "1",
-          "thumbprint": "5ccc0781ad2dffac626a04f1839fe8807909fb77",
-          "vendor": "PC Drivers Headquarters, LP"
-        },
-        {
-          "name": "ipterbg.exe",
-          "majorVersion": "1",
-          "thumbprint": "5ccc0781ad2dffac626a04f1839fe8807909fb77",
-          "vendor": "PC Drivers Headquarters, LP"
-        },
-        {
-          "name": "ipteup.exe",
-          "majorVersion": "1",
-          "thumbprint": "5ccc0781ad2dffac626a04f1839fe8807909fb77",
-          "vendor": "PC Drivers Headquarters, LP"
-        },
-        {
-          "name": "pmtu.exe",
-          "majorVersion": "1",
-          "thumbprint": "5ccc0781ad2dffac626a04f1839fe8807909fb77",
-          "vendor": "PC Drivers Headquarters, LP"
-        },
-        {
-          "name": "sigverify.exe",
-          "majorVersion": "1",
-          "thumbprint": "5ccc0781ad2dffac626a04f1839fe8807909fb77",
-          "vendor": "PC Drivers Headquarters, LP"
-        },
-        {
-          "name": "uninstall.exe",
-          "majorVersion": "1",
-          "thumbprint": "5ccc0781ad2dffac626a04f1839fe8807909fb77",
-          "vendor": "PC Drivers Headquarters, LP"
-        },
-        {
-          "name": "viometer.exe",
-          "majorVersion": "1",
-          "thumbprint": "5ccc0781ad2dffac626a04f1839fe8807909fb77",
-          "vendor": "PC Drivers Headquarters, LP"
-        }
-      ]
-    }
-  }
+  "copyright": "Copyright © AppEsteem Corporation. All Rights Reserved.",
+  "description": "Digitally signed seal for Self Regulating Client Library for JavaScript (SRCLJS).",
+  "comments": "Generated file, do not edit! If the content of the 'signedSeal' property is changed in any way, including adding spaces or newline characters, the digital signature will be broken and the seal will be reported as being forged.",
+  "signedSeal": "{\"header\":{\"signature\":\"cNKzRy3XiT8Q/BQCugNVuwslmllSZ624miM9q/sKeFnlAkFhEX0Te4vFlgQFqEPj2aCFCmYGpVOvAQXP4pcIZ8/HHci9hgeORXQ1k2L1pd6TobpwRcHj1YiiiKV0JJTbvATFH2C5nD3pL7/R5mN5v7UG+a41wrA/W8M9W4DfgltzKVPauoDCPQq3TxwSNaSJ/LxnsmvFCNl+RjS0uiYKYzgl1ziB1QAIJDCZmhaMKxpUBcWSA7SAEDAVLII78FO/Vtm/eBDZHbp5mOg+nHrblJCfBhncVApB+Otp20QhaIwlG+AY22Xefgcnd3Kj0PM9739OQZ9+wJOAB+TXhedh4w==\",\"x509Cert\":\"MIIFMjCCBBqgAwIBAgIIOqyFx1PbMFQwDQYJKoZIhvcNAQELBQAwgbQxCzAJBgNVBAYTAlVTMRAwDgYDVQQIEwdBcml6b25hMRMwEQYDVQQHEwpTY290dHNkYWxlMRowGAYDVQQKExFHb0RhZGR5LmNvbSwgSW5jLjEtMCsGA1UECxMkaHR0cDovL2NlcnRzLmdvZGFkZHkuY29tL3JlcG9zaXRvcnkvMTMwMQYDVQQDEypHbyBEYWRkeSBTZWN1cmUgQ2VydGlmaWNhdGUgQXV0aG9yaXR5IC0gRzIwHhcNMTYwNzIwMjIwNDM4WhcNMTcwNzIwMjIwNDM4WjA9MSEwHwYDVQQLExhEb21haW4gQ29udHJvbCBWYWxpZGF0ZWQxGDAWBgNVBAMMDyouYXBwZXN0ZWVtLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALseD/te6Z4YbOj0Iz7LzNi187AydQkykiwMWgPSpgkmCubkfY0rlytkG0gjdLYiOBhrlKCHB8jBl+fgebRaGZejwaIacjJxaK+xqBj1zfiwImyWwXtJed6kvWmKRIQTDHXuiZkodzwvqqHlicFwYGvrCsZDl8kv2QJD7HjwS3qNphk4oerZ7OWog2qdNTs9MAa8aXU/DOIzdQTcC//nrKk6VNxvmQCC2aLMnCekUplyrOkv2EjDsP1mRkWkcByZdafQ3FSxyjEH+irQhrrQiZMb0AMBfpyDaZ4BxRExNrMyQygpiBBEFG9+XPt0rugB4Q7GkkeaBBGB3lFI5Hnj+N0CAwEAAaOCAbwwggG4MAwGA1UdEwEB/wQCMAAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMA4GA1UdDwEB/wQEAwIFoDA3BgNVHR8EMDAuMCygKqAohiZodHRwOi8vY3JsLmdvZGFkZHkuY29tL2dkaWcyczEtMjcwLmNybDBdBgNVHSAEVjBUMEgGC2CGSAGG/W0BBxcBMDkwNwYIKwYBBQUHAgEWK2h0dHA6Ly9jZXJ0aWZpY2F0ZXMuZ29kYWRkeS5jb20vcmVwb3NpdG9yeS8wCAYGZ4EMAQIBMHYGCCsGAQUFBwEBBGowaDAkBggrBgEFBQcwAYYYaHR0cDovL29jc3AuZ29kYWRkeS5jb20vMEAGCCsGAQUFBzAChjRodHRwOi8vY2VydGlmaWNhdGVzLmdvZGFkZHkuY29tL3JlcG9zaXRvcnkvZ2RpZzIuY3J0MB8GA1UdIwQYMBaAFEDCvSeOzDSDMKIz1/tss/C0LIDOMCkGA1UdEQQiMCCCDyouYXBwZXN0ZWVtLmNvbYINYXBwZXN0ZWVtLmNvbTAdBgNVHQ4EFgQU57qMDbG+clb8NyNO3TkzgJtX6Y0wDQYJKoZIhvcNAQELBQADggEBAAQ2bxnE6DzrAl+MawZKcAKmh5jMe8z7gErlrdXf08HC49dogNug+IWPTEajOWAvWHX75qBzG/mB6kfJW+OVdzFykV9A2b6xFS1e5ekUf3N3BqCcJUebzwWHbJqKiK6GJdSZaM64gg3B+PwxcqEQHpqzf5IkQ+xItv/XEk9B3/+CjY402JEeZwtgH/KUsUV4kF/g1Jus7Q/4NU2pNJCBht6LCbjHrDW0H4BBZvLe5fkHBfHlo3QL72sp0icmn3meXkBX7vwtw7DClFZQylXvLAtPTFr1/FCa0cnPbyHijcoaYV5ALf1TXTXX84Nkal/i1vrgbYgSztm272zS75TyCGA=\"},\"seal\":{\"applicationIdentification\":{\"appId\":\"00000000-0000-0000-0000-000000000002\",\"sealId\":\"161104-PEF-DRVHQ-00001\",\"applicationType\":\"pe\"},\"attestations\":{\"address\":\"7600 Capital of Texas Highway, Building B, Suite 350, Austin, TX 78731\",\"certification\":\"yes\",\"valueProposition\":\"Driver recommendation and update services including performance optimizations.\",\"age\":\"Child appropriate\",\"audience\":[\"Consumer\"],\"category\":[\"SysTools & Utilities\"],\"monetization\":[\"Paid\",\"Up-sell\"],\"target\":[\"Windows XP\",\"Windows Vista\",\"Windows 7\",\"Windows 8\",\"Windows 10\"]},\"validDates\":{\"validForFilesSignedAfter\":\"2016-11-03T00:00:00+00:00\",\"validForFilesSignedBefore\":\"2017-11-03T00:00:00+00:00\"},\"distribution\":{\"whitelist\":{\"landingPages\":[\"http://download.driversupport.com/lp/*/*\",\"http://www.driversupport.com/\"],\"downloadUrls\":[\"http://cdn.driversupport.com/builds/v10/nsis/driversupport/DriverSupport.exe\",\"https://secure.driversupport.com/direct/driversupport/driversupport.exe\"]}},\"contents\":{\"files\":[{\"name\":\"DriverSupport.exe\",\"majorVersion\":\"10\",\"thumbprint\":\"1a7acd613247312b73a6f91156a4cc4c2a8b19c5\",\"vendor\":\"PC Drivers Headquarters, LP\"},{\"name\":\"DriverSupportApp.exe\",\"majorVersion\":\"10\",\"thumbprint\":\"1a7acd613247312b73a6f91156a4cc4c2a8b19c5\",\"vendor\":\"PC Drivers Headquarters, LP\"},{\"name\":\"DriverSupportUpdater.exe\",\"majorVersion\":\"10\",\"thumbprint\":\"1a7acd613247312b73a6f91156a4cc4c2a8b19c5\",\"vendor\":\"PC Drivers Headquarters, LP\"},{\"name\":\"Agent.CPU.exe\",\"majorVersion\":\"10\",\"thumbprint\":\"1a7acd613247312b73a6f91156a4cc4c2a8b19c5\",\"vendor\":\"PC Drivers Headquarters, LP\"},{\"name\":\"ISUninstall.exe\",\"majorVersion\":\"1\",\"thumbprint\":\"5ccc0781ad2dffac626a04f1839fe8807909fb77\",\"vendor\":\"PC Drivers Headquarters, LP\"},{\"name\":\"Uninstall.exe\",\"majorVersion\":\"1\",\"thumbprint\":\"5ccc0781ad2dffac626a04f1839fe8807909fb77\",\"vendor\":\"PC Drivers Headquarters, LP\"},{\"name\":\"DriverSupportAO.exe\",\"majorVersion\":\"1\",\"thumbprint\":\"5ccc0781ad2dffac626a04f1839fe8807909fb77\",\"vendor\":\"PC Drivers Headquarters, LP\"},{\"name\":\"DriverSupportAOsvc.exe\",\"majorVersion\":\"1\",\"thumbprint\":\"5ccc0781ad2dffac626a04f1839fe8807909fb77\",\"vendor\":\"PC Drivers Headquarters, LP\"},{\"name\":\"ipterbg.exe\",\"majorVersion\":\"1\",\"thumbprint\":\"5ccc0781ad2dffac626a04f1839fe8807909fb77\",\"vendor\":\"PC Drivers Headquarters, LP\"},{\"name\":\"ipteup.exe\",\"majorVersion\":\"1\",\"thumbprint\":\"5ccc0781ad2dffac626a04f1839fe8807909fb77\",\"vendor\":\"PC Drivers Headquarters, LP\"},{\"name\":\"pmtu.exe\",\"majorVersion\":\"1\",\"thumbprint\":\"5ccc0781ad2dffac626a04f1839fe8807909fb77\",\"vendor\":\"PC Drivers Headquarters, LP\"},{\"name\":\"sigverify.exe\",\"majorVersion\":\"1\",\"thumbprint\":\"5ccc0781ad2dffac626a04f1839fe8807909fb77\",\"vendor\":\"PC Drivers Headquarters, LP\"},{\"name\":\"uninstall.exe\",\"majorVersion\":\"1\",\"thumbprint\":\"5ccc0781ad2dffac626a04f1839fe8807909fb77\",\"vendor\":\"PC Drivers Headquarters, LP\"},{\"name\":\"viometer.exe\",\"majorVersion\":\"1\",\"thumbprint\":\"5ccc0781ad2dffac626a04f1839fe8807909fb77\",\"vendor\":\"PC Drivers Headquarters, LP\"}]}}
 }
 ```
+The important part to validate is the JSON contained within "signedSeal" as described below.
 
 ### Header section
 
@@ -198,7 +65,7 @@ This section contains a property named **files** that is an array of information
 
 ## Validating the seal
 
-A native application will contain a section with the name of '**AESeal**', this section contains the JSON seal and nothing else. After obtaining the JSON text you have to verify the following:
+A .Net C# application will contain a .Net resource named \<ProjectName\>.\<FolderName\>.AESeal.json that contains the JSON seal and nothing else. Both \<ProjectName\> and \<FolderName\> depend on the specific application. Any resource ending with ".AESeal.json" should be tested for a seal. After obtaining the JSON text you have to verify the following:
 1. The certificate in the header has a trusted certificate chain.
 2. The certificate in the header was issued to AppEsteem.
 3. The signature in the header is that of the of the seal section:
@@ -206,8 +73,8 @@ A native application will contain a section with the name of '**AESeal**', this 
 
 1. Verify that the certificate in the header has a trusted certificate chain:
 
-   a. Use the base64 encoded value of the **X509Cert** property to obtain the signing certificate (ASN encoded)
-      Pseudocode example:
+   a. Use the base64 encoded value of the **X509Cert** property to obtain the signing certificate (ASN encoded).
+   Pseudocode example:
 
    ```C++
      CryptStringToBinaryA(szCertificate, nCertificateLength, CRYPT_STRING_BASE64, certificate_bytes, &certificate_size, NULL, NULL);
@@ -215,7 +82,7 @@ A native application will contain a section with the name of '**AESeal**', this 
    ```
 
    b. Validate the certificate is trusted and it is not self signed.
-      Pseudocode example: 
+   Pseudocode example:
 
    ```C++
         CERT_CHAIN_PARA ChainPara = { 0 };
@@ -235,7 +102,7 @@ A native application will contain a section with the name of '**AESeal**', this 
 2. Verify the certificate was issued to AppEsteem.
 
    a. Validate that the certificate has the common name of "AppEsteem Corporation" and the serial number is one of those [listed](https://www.appesteem.com).
-      Pseudocode example:
+   Pseudocode example:
 
    ```C++
         DWORD str_type = CERT_X500_NAME_STR;
@@ -259,7 +126,7 @@ A native application will contain a section with the name of '**AESeal**', this 
 3. Verify the signature in the header is that of the of the seal section:
 
    a. Compute the SHA256 value of the contents of the **seal** property, including the starting and ending brackets.
-      Pseudocode example:
+   Pseudocode example:
 
    ```C++
         HCRYPTPROV hProv;
@@ -270,7 +137,7 @@ A native application will contain a section with the name of '**AESeal**', this 
    ```
 
    b. Use the public key in the certificate to validate that the signature in the header (RSASSA-PKCS-v1_5 format) is that of the calculated digest. If it is, the value of the seal is the same as what AppEsteem has certified. If they do not match, then the seal is not valid.
-      Pseudocode example:
+   Pseudocode example:
 
    ```C++
         DWORD size = 0;
