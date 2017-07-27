@@ -9,11 +9,11 @@ The SampleApplication prompts for the process that needs to be created and creat
  
   Please enter the process to be created:
   
-  calc "<Name of the process to create>"
+  calc "<Name of the process to create"
   
   Starting process: calc
   
-Please be noted that app waits for 15 sec's before the message being prompted. 
+_Please be noted that app waits for 15 sec's before the message being prompted._
 
 Few more examples : 
 1. _To start task manager_ :cs_sampleapp.exe
@@ -21,11 +21,13 @@ Few more examples :
   Please enter the process to be created:
  
   taskmgr
+
 2. _To start notepad_ :cs_sampleapp.exe
  
   Please enter the process to be created:
  
   notepad
+
 3. _To start event viewer_ :cs_sampleapp.exe
  
   Please enter the process to be created:
