@@ -5,8 +5,10 @@ This repository contains samples showing how to use the SRCL library from a mana
 # 
 _**Obtaining Seal from AppEsteem**_
 1) Login to AppEsteem portal <https://customer.appesteem.com/>
-2) Register your application. 
-3) After successful registration seal will be provided from AppEsteem.
+2) Register your application with AppEsteem.
+3) After successful registration request an AppEsteem seal by going to the “Manage my apps” page and clicking on the “Request Seal” button for desired application.
+4) You will receive an email from AppEsteem requesting additional information about the application.
+5) After receiving all the necessary information AppEsteem will provide you the seal (AESEAL.json).
 
 _**Downloading AppEsteem SRCL Library**_
 1) From Visual Studio select menu Tools -> NuGet Package Manager ->
