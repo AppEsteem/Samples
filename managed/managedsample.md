@@ -81,12 +81,10 @@ _**Downloading AppEsteem SRCL Library**_
 
 ![GitHub Logo](../media/Embeddedseal.png)
 
-10) In your projects you must correctly set the value of assembly ,version and company in Assembly Information. Alternatively you may use a version Win32 resource with valid "OriginalFilename", "ProductVersion" and "CompanyName". This information is required, either in the assembly configuration or Win32 resources.
+10) In your projects you must correctly set the value of assembly ,version and company in AssemblyInfo.cs. Alternatively you may use a version Win32 resource with valid "OriginalFilename", "ProductVersion" and "CompanyName". This information is required, either in the assembly configuration or Win32 resources and must match the information you provided when requesting the seal.
 
 11) Ensure the users of your program have the Visual C++ Redistributable run time components for the Visual Studio version you are using.
 
 12) Build the application with seal included.
 
-13) Application has to be built successfully.
-
-14) Now when the application is run SRCL library should be able to send notifications/telemetry to  the server.
+13) Now when the application is run SRCL library should be able to send notifications/telemetry to  the server.
