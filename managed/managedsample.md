@@ -8,11 +8,11 @@ _**Obtaining Seal from AppEsteem**_
 2) Register your company (you only need to do it once) :
 * Click REGISTER button on the "You do not have any Company registered" banner. 
 
-![GitHub Logo](../media/registerCompany_1.png)
+![GitHub Logo](../media/registerCompany1.png)
 
 * Enter company Name and Website. Click Register button. Upon successful registration you will be navigated to AppEsteem Portal page.
 
-![GitHub Logo](../media/registerCompany_2.png)
+![GitHub Logo](../media/registerCompany2.png)
 
 3) Register your application:
 * Under COMMIT click on “Manage my apps”.
