@@ -23,7 +23,7 @@ There are a few different to ways to do this, managed, native, and chrome
 
 While the concepts of validating the seal are the same for both managed and native code, the details are different.
 
-[Managed](managed/validatesealsharp.md)
+[Managed](managed/validatesealcsharp.md)
 
 [Native](native/validateseal.md)
 
