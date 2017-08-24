@@ -1,11 +1,11 @@
 # .NET SRCL Samples
 
 This repository contains samples showing how to use the SRCL library from a managed C# application.
-## Please follow instructions below to link srcl to the application.
+## Please follow the instructions below to link SRCL to the application.
 # 
 _**Obtaining Seal from AppEsteem**_
 1) Log in to the AppEsteem portal
-* Go to <http://appesteem.com> website and click on the 
+* Go to <http://appesteem.com> and click on the 
 "SIGN IN / SIGN UP" navigation menu link.
 
 ![GitHub Logo](../media/createAccount_1.png)
@@ -112,6 +112,6 @@ _**Downloading AppEsteem SRCL Library**_
 
 10) Ensure the users of your program have the Visual C++ Redistributable run time components for the Visual Studio and OS versions you are using.
 
-11) Build the application with thr seal included.
+11) Build the application with the seal included.
 
-12) Now when the application is run, the SRCL library should be able to send notifications/telemetry to the Appesteem server.
+12) Now when the application is run, the SRCL library should be able to send notifications/telemetry to the AppEsteem server.
