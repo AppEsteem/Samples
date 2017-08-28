@@ -29,10 +29,10 @@ _**Obtaining Seal from AppEsteem**_
 
     ![GitHub Logo](../media/createAccount_5.png)
 
-* Sign in with email and password you used to register with AppEsteem    
-    <p>
-        <img src="../media/createAccount_6.png" style="border:2px solid #e5e5e5">
-    </p>
+* Sign in with email and password you used to register with AppEsteem.
+
+    ![GitHub Logo](../media/createAccount_6.png)
+
 2) Register your company (you only need to do it once) :
 * Click the REGISTER button on the "You do not have any Company registered" banner. 
 
