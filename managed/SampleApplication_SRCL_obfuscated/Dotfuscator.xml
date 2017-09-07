@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE dotfuscator SYSTEM "http://www.preemptive.com/dotfuscator/dtd/dotfuscator_v2.3.dtd">
+<dotfuscator version="2.3">
+  <input>
+    <asmlist>
+      <inputassembly refid="ce98eafa-7120-46d7-ad28-10b1f919712c">
+        <option>honoroas</option>
+        <option>stripoa</option>
+        <option>library</option>
+        <option>transformxaml</option>
+        <file dir="C:\Users\Jorgito\Desktop\Samples\managed\SampleApplication_SRCL_obfuscated\SampleApplication_SRCL_obfuscated\bin\Release" name="CS_SampleApp.exe" />
+      </inputassembly>
+    </asmlist>
+  </input>
+  <output>
+    <file dir="${configdir}\Dotfuscated" />
+  </output>
+  <renaming>
+    <option>xmlserialization</option>
+    <excludelist>
+      <namespace name="SampleApplication_SRCL_obfuscated.AESeal.json" regex="true" />
+      <namespace name="SampleApplication_SRCL_obfuscated.Resources.srcl100.dll" regex="true" />
+      <namespace name="SampleApplication_SRCL_obfuscated.Resources.srcl10064.dll" regex="true" />
+      <namespace name="SampleApplication_SRCL_obfuscated.Resources.srcl110.dll" regex="true" />
+      <namespace name="SampleApplication_SRCL_obfuscated.Resources.srcl11064.dll" regex="true" />
+      <namespace name="SampleApplication_SRCL_obfuscated.Resources.srcl120.dll" regex="true" />
+      <namespace name="SampleApplication_SRCL_obfuscated.Resources.srcl12064.dll" regex="true" />
+      <namespace name="SampleApplication_SRCL_obfuscated.Resources.srcl140.dll" regex="true" />
+      <namespace name="SampleApplication_SRCL_obfuscated.Resources.srcl14064.dll" regex="true" />
+      <namespace name="SampleApplication_SRCL_obfuscated.Resources.srcl141.dll" regex="true" />
+      <namespace name="SampleApplication_SRCL_obfuscated.Resources.srcl14164.dll" regex="true" />
+    </excludelist>
+    <mapping>
+      <mapoutput overwrite="false">
+        <file dir="${configdir}\Dotfuscated" name="Map.xml" />
+      </mapoutput>
+    </mapping>
+    <referencerulelist>
+      <referencerule rulekey="{6655B10A-FD58-462d-8D4F-5B1316DFF0FF}" />
+      <referencerule rulekey="{7D9C8B02-2383-420f-8740-A9760394C2C1}" />
+      <referencerule rulekey="{229FD6F8-5BCC-427b-8F72-A7A413ECDF1A}" />
+      <referencerule rulekey="{2B7E7C8C-A39A-4db8-9DFC-6AFD38509061}" />
+      <referencerule rulekey="{494EA3BA-B947-44B5-BEE8-A11CC85AAF9B}" />
+      <referencerule rulekey="{89769974-93E9-4e71-8D92-BE70E855ACFC}" />
+      <referencerule rulekey="{4D81E604-A545-4631-8B6D-C3735F793F80}" />
+    </referencerulelist>
+  </renaming>
+  <sos mergeruntime="true">
+    <option>version:v4</option>
+    <option>sendanalytics</option>
+    <option>dontsendtamper</option>
+  </sos>
+  <smartobfuscation>
+    <smartobfuscationreport verbosity="all" overwrite="false" />
+  </smartobfuscation>
+</dotfuscator>
