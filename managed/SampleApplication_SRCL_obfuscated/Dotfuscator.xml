@@ -17,19 +17,6 @@
   </output>
   <renaming>
     <option>xmlserialization</option>
-    <excludelist>
-      <namespace name="SampleApplication_SRCL_obfuscated.AESeal.json" regex="true" />
-      <namespace name="SampleApplication_SRCL_obfuscated.Resources.srcl100.dll" regex="true" />
-      <namespace name="SampleApplication_SRCL_obfuscated.Resources.srcl10064.dll" regex="true" />
-      <namespace name="SampleApplication_SRCL_obfuscated.Resources.srcl110.dll" regex="true" />
-      <namespace name="SampleApplication_SRCL_obfuscated.Resources.srcl11064.dll" regex="true" />
-      <namespace name="SampleApplication_SRCL_obfuscated.Resources.srcl120.dll" regex="true" />
-      <namespace name="SampleApplication_SRCL_obfuscated.Resources.srcl12064.dll" regex="true" />
-      <namespace name="SampleApplication_SRCL_obfuscated.Resources.srcl140.dll" regex="true" />
-      <namespace name="SampleApplication_SRCL_obfuscated.Resources.srcl14064.dll" regex="true" />
-      <namespace name="SampleApplication_SRCL_obfuscated.Resources.srcl141.dll" regex="true" />
-      <namespace name="SampleApplication_SRCL_obfuscated.Resources.srcl14164.dll" regex="true" />
-    </excludelist>
     <mapping>
       <mapoutput overwrite="false">
         <file dir="${configdir}\Dotfuscated" name="Map.xml" />
