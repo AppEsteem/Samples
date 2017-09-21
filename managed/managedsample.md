@@ -104,15 +104,17 @@ _**Downloading AppEsteem SRCL Library**_
 ![GitHub Logo](../media/includingsrclincode.png)  
 
 8) Add the seal (AESEAL.json) obtained from AppEsteem to the application as Embedded Resource.
+
    * To do this select project right click -> go to properties -> select Resources tab -> from Add Resource choose Add Existing File and Select AESEAL.json File.
 
- ![GitHub Logo](../media/EmbeddedSeal_2.png) 
+ ![GitHub Logo](../media/Embeddedseal_2.png) 
    
    * Now from AESEAL.json file properties select the Build Action as Embedded Resouce.
 
  ![GitHub Logo](../media/EmbeddedSeal_3.png)
 
-Note: If AESEAL.json file is not correctly included and Embedded application might crash. If you notice crash make sure seal is properly embedded to your application.
+
+*Note: If AESEAL.json file is not correctly included and Embedded application might crash. If you notice crash make sure seal is properly embedded to your application.*
 
 9) In your projects you must correctly set the value of assembly, version and company in AssemblyInfo.cs. Alternatively you may use a version Win32 resource with valid "OriginalFilename", "ProductVersion" and "CompanyName". This information is required, either in the assembly configuration or Win32 resources and must match the information you provided when requesting the seal.
 
