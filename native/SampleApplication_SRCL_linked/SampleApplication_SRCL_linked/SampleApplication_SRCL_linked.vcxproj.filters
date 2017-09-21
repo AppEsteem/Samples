@@ -35,7 +35,10 @@
     <ClCompile Include="SampleApplication_SRCL_linked.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\Radhika\cpp\seals\registration.cpp">
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\lib\native\source\srcl_init.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\AESeal\resgistration.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
