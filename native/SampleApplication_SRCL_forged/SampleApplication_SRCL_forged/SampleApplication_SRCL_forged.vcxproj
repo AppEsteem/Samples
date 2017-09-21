@@ -150,7 +150,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\Radhika\cpp\seals\registration.cpp" />
+    <ClCompile Include="..\AESeal\registration.cpp" />
     <ClCompile Include="SampleApplication_SRCL_forged.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
