@@ -88,6 +88,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -101,6 +102,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -116,6 +118,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -133,6 +136,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -166,12 +170,12 @@
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
-    <Import Project="..\packages\AppEsteem.SRCL.CPP.2.0.0\build\native\AppEsteem.SRCL.CPP.targets" Condition="Exists('..\packages\AppEsteem.SRCL.CPP.2.0.0\build\native\AppEsteem.SRCL.CPP.targets')" />
+    <Import Project="..\packages\AppEsteem.SRCL.CPP.2.1.0\build\native\AppEsteem.SRCL.CPP.targets" Condition="Exists('..\packages\AppEsteem.SRCL.CPP.2.1.0\build\native\AppEsteem.SRCL.CPP.targets')" />
   </ImportGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\AppEsteem.SRCL.CPP.2.0.0\build\native\AppEsteem.SRCL.CPP.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\AppEsteem.SRCL.CPP.2.0.0\build\native\AppEsteem.SRCL.CPP.targets'))" />
+    <Error Condition="!Exists('..\packages\AppEsteem.SRCL.CPP.2.1.0\build\native\AppEsteem.SRCL.CPP.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\AppEsteem.SRCL.CPP.2.1.0\build\native\AppEsteem.SRCL.CPP.targets'))" />
   </Target>
 </Project>

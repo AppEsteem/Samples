@@ -7,7 +7,7 @@
 // the seal will be reported as being forged.                                       //
 //////////////////////////////////////////////////////////////////////////////////////
 
-#pragma const_seg(push, stack1, "AESeal")
+#pragma const_seg(push, stack1, ".AESeal")
 const unsigned char seal_json[] = 
     "{\"header\":{\"signature\":\"BZp9vuY2hnm1DKI49My5moxC+7rJr8Fmc8HULDejIhoxvcuO6g0"
     "rZOub9L60RARrHVpgkokRkw+f7hPv1NnNJKQfa5p2Bn5x7kzNNpewuyBng2Irr5PZTqyMlo2fKEooXFn"
