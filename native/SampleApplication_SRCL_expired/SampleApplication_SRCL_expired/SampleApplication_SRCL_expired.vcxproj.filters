@@ -35,10 +35,10 @@
     <ClCompile Include="SampleApplication_SRCL_expired.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\lib\native\source\srcl_init.cpp">
+    <ClCompile Include="..\AESeal\registration.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\AESeal\registration.cpp">
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\lib\native\source\srcl_init.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

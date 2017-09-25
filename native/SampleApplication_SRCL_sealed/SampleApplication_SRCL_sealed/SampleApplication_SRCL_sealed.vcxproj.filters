@@ -35,9 +35,6 @@
     <ClCompile Include="SampleApplication_SRCL_sealed.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\lib\native\source\srcl_init.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\AESeal\registration.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
