@@ -120,6 +120,8 @@ _**Downloading AppEsteem SRCL Library**_
 
 10) Ensure the users of your program have the Visual C++ Redistributable run time components for the Visual Studio and OS versions you are using.
 
+*Note: For WindowsXP in case if you do not dual sign the binaries, please apply patch "KB968730" on windows XP machine for SRCL to report files correctly.*
+
 11) Build the application with the seal included.
 
 12) Now when the application is run, the SRCL library should be able to send notifications/telemetry to the AppEsteem server.

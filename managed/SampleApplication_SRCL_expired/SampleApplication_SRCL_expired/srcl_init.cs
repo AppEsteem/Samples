@@ -12,7 +12,7 @@ namespace SRCL
     sealed class Init : IDisposable
     {
         [UnmanagedFunctionPointer(CallingConvention.StdCall)]
-        delegate int SRCLINIT();
+        delegate int SRCLINIT(IntPtr buf, Int32 buf_size, [MarshalAs(UnmanagedType.LPStr)] string vendor, [MarshalAs(UnmanagedType.LPStr)] string version, [MarshalAs(UnmanagedType.LPStr)] string filename);
 
         [UnmanagedFunctionPointer(CallingConvention.StdCall)]
         delegate void SRCLTERM();
@@ -24,6 +24,7 @@ namespace SRCL
                 dllPath = Path.GetTempFileName();
                 string[] resourceNames = Assembly.GetExecutingAssembly().GetManifestResourceNames();
                 string dllResourceName = "";
+                string sealResourceName = "";
                 if (IntPtr.Size == 4)
                 {
                     // 32 bit
@@ -38,6 +39,7 @@ namespace SRCL
                         if (dll_version != "100" && dll_version != "110" && dll_version != "120" && dll_version != "140" && dll_version != "141")
                             continue;
                         dllResourceName = name;
+                        sealResourceName = name.Substring(0, name.Length - 11) + "AESEAL.json";
                         break;
                     }
                 }
@@ -55,6 +57,7 @@ namespace SRCL
                         if (dll_version != "100" && dll_version != "110" && dll_version != "120" && dll_version != "140" && dll_version != "141")
                             continue;
                         dllResourceName = name;
+                        sealResourceName = name.Substring(0, name.Length - 13) + "AESEAL.json";
                         break;
                     }
                 }
@@ -65,18 +68,35 @@ namespace SRCL
                     {
                         using (var file = new FileStream(dllPath, FileMode.OpenOrCreate, FileAccess.Write))
                         {
-                            resource.CopyTo(file);
+                            byte[] bytesInStream = new byte[resource.Length];
+                            resource.Read(bytesInStream, 0, bytesInStream.Length);
+                            file.Write(bytesInStream, 0, bytesInStream.Length);
                         }
                     }
 
                     dll = NativeMethods.LoadLibraryW(dllPath);
                     if (dll != IntPtr.Zero)
                     {
-                        IntPtr pInit = NativeMethods.GetProcAddress(dll, "srcl_1");
-                        if (pInit != IntPtr.Zero)
+                        using (var resource = Assembly.GetExecutingAssembly().GetManifestResourceStream(sealResourceName))
                         {
-                            SRCLINIT srcl_init = (SRCLINIT)Marshal.GetDelegateForFunctionPointer(pInit, typeof(SRCLINIT));
-                            srcl_init(); // best effort
+                            MemoryStream ms = new MemoryStream();
+                            byte[] bytesInStream = new byte[resource.Length];
+                            resource.Read(bytesInStream, 0, bytesInStream.Length);
+                            ms.Write(bytesInStream, 0, bytesInStream.Length);
+                            var seal = ms.ToArray();
+                            var company = ((AssemblyCompanyAttribute)Attribute.GetCustomAttribute(Assembly.GetExecutingAssembly(), typeof(AssemblyCompanyAttribute), false)).Company;
+                            var majorVersion = Assembly.GetExecutingAssembly().GetName().Version.Major.ToString();
+                            var moduleName = Assembly.GetExecutingAssembly().ManifestModule.Name;
+
+                            IntPtr pInit = NativeMethods.GetProcAddress(dll, "srcl_0");
+                            if (pInit != IntPtr.Zero)
+                            {
+                                IntPtr buf = Marshal.AllocHGlobal(seal.Length);
+                                Marshal.Copy(seal, 0, buf, seal.Length);
+                                SRCLINIT srcl_init = (SRCLINIT)Marshal.GetDelegateForFunctionPointer(pInit, typeof(SRCLINIT));
+                                srcl_init(buf, seal.Length, company, majorVersion, moduleName); // best effort
+                                Marshal.FreeHGlobal(buf);
+                            }
                         }
                     }
                 }
