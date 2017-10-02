@@ -198,7 +198,7 @@ This section contains a property named **files** that is an array of information
 
 ## Validating the seal
 
-A native application will contain a section with the name of '**AESeal**', this section contains the JSON seal and nothing else. After obtaining the JSON text you have to verify the following:
+A native application will contain a section with the name of '**.AESeal**', this section contains the JSON seal and nothing else. After obtaining the JSON text you have to verify the following:
 1. The certificate in the header has a trusted certificate chain.
 2. The certificate in the header was issued to AppEsteem.
 3. The signature in the header is that of the of the seal section:
