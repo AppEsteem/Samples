@@ -75,3 +75,21 @@ _**Downloading AppEsteem SRCL Library**_
 
     *Steps to resolve:* If you are using precompiled headers in your project, configure precompiled headers not using Precompiled Headers.
  _To do this go to Visual studio Solution Explorer right click on your application and select properties -> C++ tab -> Precompiled Headers -> Precompiled Header and select Not Using Precompiled Headers._
+
+ **Steps to uninstall SRCL Library**
+
+1) From visual studio select menu Tools -> NuGet Package Manager ->
+ Manage Nuget Package for solution.
+2) Select Browse and search for appesteem.You should be able to see AppEsteem.SRCL.CPP listed.
+
+    ![GitHub Logo](../media/cpp_FindPackage_1.png)
+3) Select the application to be linked to AppEsteem SRCL Library and click uninstall button.
+
+    ![GitHub Logo](../media/Uninstall_SRCL.png)
+4) A screen will be displayed to Review changes and to proceed with uninstallation.
+
+    ![GitHub Logo](../media/Uninstall_Review.png)
+6) Select OK button to continue.
+7) We can now see the message on the screen that the uninstallation is  finished.
+
+    ![GitHub Logo](../media/Uninstall_Confirmation.png)
