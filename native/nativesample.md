@@ -80,12 +80,13 @@ _**Downloading AppEsteem SRCL Library**_
 
 1) From visual studio select menu Tools -> NuGet Package Manager ->
  Manage Nuget Package for solution.
-2) Select Browse and search for appesteem.You should be able to see AppEsteem.SRCL.CPP listed.
 
-    ![GitHub Logo](../media/cpp_FindPackage_1.png)
+2) Select Installed option and then select   AppEsteem.SRCL.CPP listed. 
+    
 3) Select the application linked to AppEsteem SRCL Library and click uninstall button.
 
-    ![GitHub Logo](../media/Uninstall_SRCL.png)
+    ![GitHub Logo](../media/Uninstall_SRCL_CPP.png)
+    
 4) A screen will be displayed to Review changes and to proceed with uninstallation.
 
     ![GitHub Logo](../media/Uninstall_Review.png)
