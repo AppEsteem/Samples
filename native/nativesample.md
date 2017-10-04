@@ -83,7 +83,7 @@ _**Downloading AppEsteem SRCL Library**_
 2) Select Browse and search for appesteem.You should be able to see AppEsteem.SRCL.CPP listed.
 
     ![GitHub Logo](../media/cpp_FindPackage_1.png)
-3) Select the application to be linked to AppEsteem SRCL Library and click uninstall button.
+3) Select the application linked to AppEsteem SRCL Library and click uninstall button.
 
     ![GitHub Logo](../media/Uninstall_SRCL.png)
 4) A screen will be displayed to Review changes and to proceed with uninstallation.
