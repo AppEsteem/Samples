@@ -5,45 +5,87 @@
 > Please follow instructions below to download and link vendor application to SRCL library:
 
 _**Obtaining Seal from AppEsteem**_
-1) Login to AppEsteem portal <https://customer.appesteem.com/>
+1) Log in to the AppEsteem portal
+* Go to <http://appesteem.com> and click on the 
+"SIGN IN / SIGN UP" navigation menu link.
+
+![GitHub Logo](../media/createAccount_1.png)
+
+* If you already have an AppEsteem account, click the Sign In button and sign in with email and password you used to register with AppEsteem.
+
+![GitHub Logo](../media/createAccount_2.png)
+
+* If you do not have an AppEsteem account, create it:
+    
+    - Click on the Create Account link.
+    - Enter your Email address and click the Get Verification Code button.
+
+    ![GitHub Logo](../media/createAccount_3.png)
+
+    - Enter the Verification Code you received by email and click the Verify button.
+
+    ![GitHub Logo](../media/createAccount_4.png)
+
+    - Enter Your Name, Password, Confirm Password and click the Submit button.
+
+    ![GitHub Logo](../media/createAccount_5.png)
+
+* Sign in with email and password you used to register with AppEsteem.
+
+    ![GitHub Logo](../media/createAccount_6.png)
+
 2) Register your company (you only need to do it once) :
-* Click REGISTER button on the "You do not have any Company registered" banner. 
+* Click the REGISTER button under the "You do not have any Company registered" message. 
 
 ![GitHub Logo](../media/registerCompany1.png)
 
-* Enter company Name and Website. Click Register button. Upon successful registration you will be navigated to AppEsteem Portal page.
+* Enter the company Name and Website. Click the Register button. Upon successful registration you will be navigated to the AppEsteem Portal page.
 
 ![GitHub Logo](../media/registerCompany2.png)
 
-3) Register your application:
+3) Sign the AppEsteem Certification Agreement:
+
+* Under COMMIT click on “Agree to the Certification Agreement”.
+
+![GitHub Logo](../media/agreeCertificationAgreement_1.png)
+
+* Read the Certification Agreement by clicking on the Certification Agreement link, check the "I agree with the Certification Agreement" checkbox and click the Next button.
+
+![GitHub Logo](../media/agreeCertificationAgreement_2.png)
+
+* Upon successfully signed the Certification Agreement you will see the check mark next to the "Agree to the Certification Agreement” link on the Portal page.
+
+![GitHub Logo](../media/agreeCertificationAgreement_3.png)
+
+4) Register your application:
 * Under COMMIT click on “Manage my apps”.
 
 ![GitHub Logo](../media/registerApplication_1.png)
 
-* There are two ways to start application registration:
-  - If this is your first application you will see the banner "No apps have been registered for Sample Company". Click on ADD NEW APP button.
+* There are two ways to start the application registration:
+  - If this is your first application you will see the message "No apps have been registered for Sample Company". Click the ADD NEW APP button.
 
   ![GitHub Logo](../media/registerApplication_2.png)
 
-  - Othervise you will see the list of registered applications. Click on the "+" button.
+  - Othervise you will see the list of registered applications. Click the "+" button.
 
   ![GitHub Logo](../media/registerApplication_5.png)
 
-* Enter Application Name and Application Type and click Submit button.
+* Enter Application Name and Application Type and click the Submit button.
 
 ![GitHub Logo](../media/registerApplication_3.png)
 
-* After successful registration you will see "Success!" message. Click on "Manage your applications" link.
+* After the successful registration you will see the "Success!" message. Click on the "Manage your applications" link.
 
 ![GitHub Logo](../media/registerApplication_4.png)
 
-* Registered application will appear in "Apps In Development" table.
+* The registered application will appear in the "Apps In Development" table.
 
 ![GitHub Logo](../media/registerApplication_5.png)
 
-4) Request an AppEsteem seal by clicking on the “Request Seal” button for desired application. This will generate an email to AppEstseem.
-5) You will receive an email from AppEsteem requesting additional information about the application within 2 business days.
-6) After receiving all the necessary information AppEsteem will provide you the seal (registration.cpp).
+5) Request the application-specific AppEsteem seal by clicking on the “Request Seal” button. This will generate an email to AppEstseem.
+6) You will receive an email from AppEsteem requesting additional information about the application within 2 business days.
+7) After receiving all the necessary information AppEsteem will provide you the seal (registration.cpp).
 
 _**Downloading AppEsteem SRCL Library**_
 1) From visual studio select menu Tools -> NuGet Package Manager ->
