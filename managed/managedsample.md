@@ -139,3 +139,22 @@ _**Downloading AppEsteem SRCL Library**_
 11) Build the application with the seal included.
 
 12) Now when the application is run, the SRCL library should be able to send notifications/telemetry to the AppEsteem server.
+
+**Steps to uninstall SRCL Library**
+
+1) From visual studio select menu Tools -> NuGet Package Manager -> Manage Nuget Package for solution.
+
+2) Select Installed option and then select   AppEsteem.SRCL.CSharp listed. 
+    
+3) Select the application linked to AppEsteem SRCL Library and click uninstall button.
+
+![GitHub Logo](../media/Uninstall_SRCL_CS.png)
+    
+4) A screen will be displayed to Review changes and to proceed with uninstallation.
+
+![GitHub Logo](../media/Uninstall_Review_CS.png)
+6) Select OK button to continue.
+7) We can now see the message on the screen that the uninstallation is  finished.
+
+![GitHub Logo](../media/Uninstall_Confirmation_CS.png)
+
