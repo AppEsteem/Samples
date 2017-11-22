@@ -101,7 +101,7 @@ A .Net C# application will contain a .Net resource named \<ProjectName\>.\<Folde
 
 2. Verify the certificate was issued to AppEsteem.
 
-   a. Validate that the certificate has the common name of "AppEsteem Corporation" and the serial number is one of those [listed](https://www.appesteem.com).
+   a. Validate that the certificate has the common name of "AppEsteem Corporation".
    Pseudocode example:
 
    ```C++
@@ -120,7 +120,7 @@ A .Net C# application will contain a .Net resource named \<ProjectName\>.\<Folde
             sprintf_s(buf, sizeof(buf), "%02x", b);
             serial += buf;
         }
-        // serial must be listed at TODO
+        
    ```
 
 3. Verify the signature in the header is that of the of the seal section:
