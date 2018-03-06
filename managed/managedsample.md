@@ -134,9 +134,8 @@ _**Including Seal to you code**_
 
  ![GitHub Logo](../media/EmbeddedSeal_3.png)
 
-4) To verify the seal is included correctly download the tool "show_seal.exe" from the following folder.
-
-<https://github.com/AppEsteem/Samples/tree/master/Seal-Tool>
-
+4) To verify if the seal is included correctly, download the tool "show_seal.exe" from the following folderlocation.
+   <https://github.com/AppEsteem/Samples/tree/master/Seal-Tool>
  Run "show_seal.exe" with the files where seal is included as shown in the example below.
+
    Ex: show_seal.exe C:\SealedFiles\SampleApplication.exe
