@@ -131,3 +131,10 @@ _**Including Seal to you code**_
 
     *Steps to resolve:* If you are using precompiled headers in your project, configure precompiled headers not using Precompiled Headers.
  _To do this go to Visual studio Solution Explorer right click on your application and select properties -> C++ tab -> Precompiled Headers -> Precompiled Header and select Not Using Precompiled Headers._ 
+
+ 3) To verify if the seal is included correctly, download the tool "show_seal.exe" from the following location.
+   <https://github.com/AppEsteem/Samples/tree/master/Seal-Tool>
+
+ Run "show_seal.exe" with the files where seal is included as shown in the example below.
+
+   Ex: show_seal.exe "C:\SealedFiles\SampleApplication.exe".
