@@ -124,7 +124,7 @@ _**Including Seal to you code**_
 
 1) After requesting the seal from AppEsteem you would be receiving AESEAL.json and registration.cpp files for integration to Managed and Native code respectively.
 
-3) Add the seal (AESEAL.json file) obtained from AppEsteem to the application as Embedded Resource.
+2) Add the seal (AESEAL.json file) obtained from AppEsteem to the application as Embedded Resource.
 
    * To do this select project right click -> go to properties -> select Resources tab -> from Add Resource choose Add Existing File and Select AESEAL.json File.
 
@@ -133,6 +133,8 @@ _**Including Seal to you code**_
    * Now from AESEAL.json file properties select the Build Action as Embedded Resouce.
 
  ![GitHub Logo](../media/EmbeddedSeal_3.png)
+
+3) If you are obfuscating your code please make sure to exclude seal(AESEAL.json) file from obfuscation.
 
 4) To verify if the seal is included correctly, download the tool "show_seal.exe" from the following location.
    <https://github.com/AppEsteem/Samples/tree/master/Seal-Tool>
