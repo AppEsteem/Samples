@@ -21,5 +21,3 @@ While the concepts of validating the seal are the same for both managed and nati
 [Managed](managed/validatesealcsharp.md)
 
 [Native](native/validateseal.md)
-
-[Chrome](chrome/validateseal.md)

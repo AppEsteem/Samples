@@ -68,7 +68,8 @@ This section contains a property named **files** that is an array of information
 A .Net C# application will contain a .Net resource named \<ProjectName\>.\<FolderName\>.AESeal.json that contains the JSON seal and nothing else. Both \<ProjectName\> and \<FolderName\> depend on the specific application. Any resource ending with ".AESeal.json" should be tested for a seal. After obtaining the JSON text you have to verify the following:
 1. The certificate in the header has a trusted certificate chain.
 2. The certificate in the header was issued to AppEsteem.
-3. The signature in the header is that of the of the seal section:
+3. Validate the creation date of the file is within the date period covered by the seal.
+4. The signature in the header is that of the of the seal section:
 ---
 
 1. Verify that the certificate in the header has a trusted certificate chain:
