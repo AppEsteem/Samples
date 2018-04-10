@@ -3,7 +3,7 @@
 In order to perform any operations on the AppEsteem customer portal, an account must first be created. The following steps will create a customer account that is linked to you email address.
 
 1. Log in to the AppEsteem portal. Navigate to <http://appesteem.com> and click on the 
-"SIGN IN / SIGN UP" navigation menu link
+"Log in" navigation menu link
 
     ![AppEsteem SIGN IN/SIGN UP menu](./media/createAccount_1.png)
 
@@ -15,11 +15,11 @@ In order to perform any operations on the AppEsteem customer portal, an account 
 
     ![AppEsteem Email Verification page](./media/createAccount_3.png)
 
-4. After a few moments, your check your email for the verification code sent from AppEsteem. Enter the Verification Code you received by email and click the Verify button. Once the code has been verified, you'll be advanced to the next page
+4. After a few moments, please check your email for the verification code sent from AppEsteem. Enter the Verification Code you received by email and click the Verify button. Once the code has been verified, you'll be advanced to the next page
 
     ![AppEsteem Enter Verification Code page](./media/createAccount_4.png)
 
-5. Enter Your Name, Password, Confirm Password and click the Submit button. When both passwords match, you will be directed to the signing page.
+5. Enter Your Name, Password, Confirm Password and click the **Submit** button. When both passwords match, you will be directed to the signing page.
 
     ![User password prompt page](./media/createAccount_5.png)
 

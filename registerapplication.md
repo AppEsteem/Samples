@@ -12,40 +12,36 @@
 
     ![Application List](./media/registerApplication_3.png)
 
-2. Enter Application Name, Application Landing Page and Application Type.
+2. Enter Application Name, Application Latest Version, Application Landing Page and Application Type.
 
     ![Register Application form](./media/registerApplication_4.png)
 
-3. Next step depends on the commitment level of your company. If your company has "Explore" commitment level, you will see three categories of service. Choose Premium Support by clicking the Select button under the PREMIUM SUPPORT. Check the agree checkbox and click the Register Application to continue registration.
+3. Next step depends on the commitment level of your company. If your company has "Explore" commitment level, you will see four categories of service. Choose one of the  Premium Support by clicking the Select button under the PREMIUM SUPPORT or under PREMIUM SUPPORT AND APP JAIL SERVICES. Click the **Register Application** to continue registration.
 
     ![Category of Service](./media/registerApplication_5.png)
 
-   If your company has "Committed" commitment level, you will see only one category of service - Premium support. Click the Register Application button to continue registration.
+   If your company has "Committed" commitment level, you will see only one category of service - PREMIUM SUPPORT AND APP JAIL SERVICES. Click the **Register Application** button to continue registration.
 
     ![Premium Support](./media/registerApplication_6.png)
 
-4. Enter application version and click on the **Next** button.
-
-    ![Register Application Version](./media/registerApplication_7.png)
-
-5. Request Application Certification. Upload application executables and click the **Next** button
+4. Request Application Certification. Upload application executables and click the **Next** button
 
     ![Certify Application Step 1](./media/registerApplication_8.png)
 
-6. Provide application information and click on the **Next** button.
+5. Provide application information and click on the **Next** button.
 
     ![Certify Application Step 2](./media/registerApplication_9.png)
 
     ![Certify Application Step 2](./media/registerApplication_10.png)
 
-7. Check checkboxes for Attestation, enter your Name and click the **Submit** button.
+6. Check checkboxes for Attest, enter your Name and click the **Submit** button.
 
     ![Certify Application Step 3](./media/registerApplication_11.png)
 
-    **NOTE:** At any step of the Request Application Certification, you can click the **Save** for later button. To resume the Certification later you would need to go to the Application List page and click the *Request Certification* link for the correspondent application version.
+    **NOTE:** At any step of the Request Application Certification, you can click the **Save for later** button. To resume the Certification later you would need to go to the Application List page and click the *Request App Review* link for the correspondent application version.
 
     ![Application List](./media/registerApplication_13.png)
 
-8. After the successful registration you will be redirected to the Application List page. The registered application will appear in this list.
+7. After the successful registration you will be redirected to the Application List page. The registered application will appear in this list.
 
     ![Application List](./media/registerApplication_12.png)
