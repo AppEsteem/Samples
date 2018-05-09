@@ -5,6 +5,7 @@ This repository contains samples for using the AppEsteem Seal. It has detailed i
 ## Vendor Prerequisites
 
 [Register your Company with AppEsteem](registercompany.md)
+
 [Register your Application with AppEsteem](registerapplication.md)
 
 ## AppEsteem Seal
