@@ -28,7 +28,7 @@
 
     ![Visual Studio Explorer](../media/EmbeddedSeal_3.png)
 
-4. If you are obfuscating your code please make sure to exclude sealAESEAL.json file from obfuscation.
+4. If you are obfuscating your code please make sure to exclude seal AESEAL.json file from obfuscation.
 
 5. To verify if the seal is included correctly, download the tool "VerifySeal" from the sample repository
 
