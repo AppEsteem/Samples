@@ -73,7 +73,7 @@ There a few different ways that date values must be verified
 
 * The seal properties **validForFilesSignedAfter** and **validForFilesSignedBefore** _**must**_ have a valid date specified in the format of YYYY-MM-DD
 * The file creation date _**must**_ fall between the **validForFilesSignedAfter** and **validForFilesSignedBefore** properties contained within the seal. If the file creation date is outside of these dates, that means that the seal was either not yet valid or expired when the file was created
-* The seal's **validForFileSignedAfter** property _**must**_ fall within the effective period for the certificate. It is OK if the **validForFilesSignedBefore** property falls outside of the valid interval of the certificate
+* The seal's valid interval _**must**_ overlap the effective period for the certificate. This allows for a new certificate to be used for a seal that was issued before the certificate effective date.
 
 ```csharp
     string sAfter = root.SelectToken("seal.validDates.validForFilesSignedAfter").ToString();
@@ -98,7 +98,7 @@ There a few different ways that date values must be verified
         // Invalid - Certificate effective date or expiration date could not be parsed.
     }
 
-    // Check that the validForFilesSignedAfter falls during the effective interval of the certificate.
+    // Check that the valid seal interval overlaps the effective interval of the certificate.
     if ((after < certEffective) || (after > certExpiration))
     {
         // Invalid - ValidForFilesSignedAfter does not fall between the effective dates of the certificate.

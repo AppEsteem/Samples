@@ -6,18 +6,20 @@ This repository contains samples for using the AppEsteem Seal. It has detailed i
 
 Seal can be included within either a native (C++) application or within a managed (C#) application. The instructions for native can be found in the integrate with your code section of this document.
 
-### Integrate with your code
+[What is a seal](whatisaseal.md)
 
-There are a few different to ways to do this, managed and native
+### Integrate with your Code
+
+There are a few different to ways to do this, based on if the application is managed or native
 
 [Managed Sample](managed/managedsample.md)
 
 [Native Sample](native/nativesample.md)
 
-### Validate a seal
+### Validate a Seal
 
-While the concepts of validating the seal are the same for both managed and native code, the details are different.
+[How to validate a seal](howtovalidateaseal.md)
 
-[Managed](managed/validatesealcsharp.md)
+### VerifySeal Tool
 
-[Native](native/validateseal.md)
+[How to use the verifySeal Tool](verifySeal.md)
