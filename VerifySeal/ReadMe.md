@@ -4,7 +4,7 @@
 
 The **verifySeal** tool is a utility provided by AppEsteem to our customers to validate that an AppEsteem provided seal is correctly embedded within their application's files. It can also verify the JSON seal file, though without the context of a file containing the seal, it cannot verify the seal is correctly embedded.
 
-See [How to Use the VerifySeal](..\verifyseal.md) tool for information on how to use the tool.
+See [How to Use the VerifySeal](../verifyseal.md) tool for information on how to use the tool.
 
 ## How to build the VerifySeal Tool
 
