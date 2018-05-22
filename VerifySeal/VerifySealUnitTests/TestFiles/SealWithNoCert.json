@@ -1,0 +1,171 @@
+{
+    "header": {
+        "copyright": "Copyright © AppEsteem Corporation. All Rights Reserved.",
+        "description": "Digitally signed seal for AppEsteem Corporation.",
+        "comments": "Generated file, do not edit! If the content is changed in any way, including adding spaces or newline characters, the digital signature will be broken and the seal will be reported as being forged.",
+        "signature": "idcmh1j6ct3s5pYhlxKYBGT1WzBLYwsV4pRbUBqEMQ31evYOpPAsXUTmK+NYi/svlTsyeTNIMPJxCbRZBlPwGYH1IOylJOMbDEBlFOV+jFHh8/8clnoMPFTMzkzsh/1hnRgHQi9z7NuSNC2oqlJSvEuKFNn8DuRtBqtTB/mWvz7JJruDEFKSGLjutpWzXWPK+c9fW4LhiodRYX7QYlTt9LMRLc8lB3oymKbhjIAmqKu0Lm0dC8+IIiK74KkxBhmrLWEuJWmc1aQ9QTiH5L7pShIovWNH6tPsWTqwtfMABlkNK7Feuk2ExiEwo3ZbWGtd+TdxVLm8x4tZnRI/SuJZOQ=="        
+    },
+    "seal": {
+        "serialNumber": "31b37c38-a323-9138-6b43-a90c2bca500b",
+        "applicationIdentification": {
+            "appGuid": "d65618fa-da03-4ca4-b6a9-831473116016",
+            "appId": "ienewtabinstaller-170714",
+            "productName": "IE New Tab Installer",
+            "version": "4.2.0.10",
+            "firstCertifiedVersion": "4.2.0.3",
+            "applicationType": "Windows Executable"
+        },
+        "attestations": {
+            "vendor": "SpringTech Ltd",
+            "certified": "yes",
+            "firstCertifiedVersion": "4.2.0.3",
+            "valueProposition": "Our products are offered 100% free to our users and deliver easy 1-click access to the content users want.",
+            "age": "Adults only",
+            "audience": [
+                "consumer"
+            ],
+            "category": [
+                "Travel & Navigation",
+                "Sports",
+                "SysTools & Utilities",
+                "Social Networking & Messaging",
+                "Shopping",
+                "Productivity",
+                "Personalization & Search",
+                "Games",
+                "Health & Fitness",
+                "Lifestyle & Dating",
+                "News & Weather",
+                "Books & Reference"
+            ],
+            "monetization": [
+                "search"
+            ],
+            "target": [
+                "IE",
+                "Windows 7",
+                "Windows 8",
+                "Windows 10",
+                "Windows XP",
+                "Windows Vista"
+            ],
+            "bundlersCarrying": [
+                "None"
+            ],
+            "bundlersOffering": [
+                "None"
+            ]
+        },
+        "validDates": {
+            "validForFilesSignedAfter": "2018-03-13",
+            "validForFilesSignedBefore": "2019-03-13"
+        },
+        "distribution": {
+            "whitelist": {
+                "landingPages": [
+                    "http://myquickconverter.com/*",
+                    "http://packageintransit.com/*",
+                    "http://trackyourpackages.co/*",
+                    "http://fastpackagetracker.co/*",
+                    "http://watchtvnow.co/*",
+                    "http://livetvnow.co/*",
+                    "http://emailaccessonline.com/*",
+                    "http://myonlinecalendar.co/*",
+                    "http://mytemplates.co/*",
+                    "http://textfrompc.co/*",
+                    "http://wildforscrapbooking.com/*",
+                    "http://dailysocialweb.com/*",
+                    "http://myphotoeditor.co/*",
+                    "http://wallstreetwatch.co/*",
+                    "http://easyconverter.co/*",
+                    "http://easystreamingnow.com/*",
+                    "http://notepadpro.co/*",
+                    "http://watchsportslive.co/*",
+                    "http://localclassifiedlist.com/*",
+                    "http://myweatherradar.co/*",
+                    "http://mylocaltransit.co/*",
+                    "http://playfreemusic.co/*",
+                    "http://freeformsnow.com/*",
+                    "http://mynewswire.co/*",
+                    "http://instantnewsnow.co/*",
+                    "http://easyspeedtest.co/*",
+                    "http://freeliveradio.co/*",
+                    "http://freeforms.co/*",
+                    "http://classifiedlist.net/*",
+                    "http://classifiedseasy.com/*",
+                    "http://localweatherradar.co/*",
+                    "http://emailloginnow.com/*",
+                    "http://theweathercenter.co/*",
+                    "http://trackmyflight.co/*",
+                    "http://trackyourflight.co/*",
+                    "http://loginnow.net/*",
+                    "http://dailybibleverses.co/*",
+                    "http://easyrecipesnow.com/*",
+                    "http://transitschedule.co/*",
+                    "http://get.couponsimplified.com/*",
+                    "http://directionsandmap.com/*",
+                    "http://thereadinghub.com/*",
+                    "http://officeworksuite.com/*",
+                    "http://mapsanddirections.co/*",
+                    "http://gomaps.co/*",
+                    "http://watchanysports.com/*",
+                    "http://watchallsports.co/*",
+                    "http://getsports.net/*",
+                    "http://digitalcointracker.net/*",
+                    "http://getfitnow.co/*",
+                    "http://easytaxes.co/*",
+                    "http://thenewssource.co/*",
+                    "http://crimereport.co/*",
+                    "http://mybanklogin.com/*",
+                    "http://discovermyancestry.com/*",
+                    "http://myutilitybox.co/*",
+                    "http://designyoursite.co/*",
+                    "http://simpleconverter.co/*",
+                    "http://trackyourpackages.net/*",
+                    "http://gomapsandirections.com/*",
+                    "http://easyformsonline.co/*",
+                    "http://www.zugriffemail.com/*",
+                    "http://www.moyapochtavkhod.com/*",
+                    ""
+                ],
+                "downloadUrls": [
+                    "http://springdwnld2.com/download/?d=*&h=*&ua=*&pnid=*&domain=*&implementation_id=*&source=*&adprovider=*&user_id=*&dfn=* &spo=*&ies=*&hh=*&sso=*&appname=*&appdesc=*",
+                    ""
+                ],
+                "installers": [
+                    "InstantNewsNow.exe",
+                    "IEInstaller.exe"
+                ],
+                "affiliates": [
+                    "Google Adwords, Bing Ad Center, Yahoo.  We run our own affiliate network."
+                ]
+            }
+        },
+        "contents": [
+            {
+                "name": "Uninstall.exe",
+                "version": " 4. 2. 0. 13",
+                "thumbprint": "7DC5CC3BB2437C53E6B30BDCAD1B9994C98818A4",
+                "vendor": "SpringTech Ltd."
+            },
+            {
+                "name": "InstantNewsNow.exe",
+                "version": " 4. 2. 0. 10",
+                "thumbprint": "7DC5CC3BB2437C53E6B30BDCAD1B9994C98818A4",
+                "vendor": "SpringTech Ltd."
+            },
+            {
+                "name": "IEInstaller.exe",
+                "version": " 4. 2. 0. 10",
+                "thumbprint": "7DC5CC3BB2437C53E6B30BDCAD1B9994C98818A4",
+                "vendor": "SpringTech Ltd."
+            },
+            {
+                "name": "IEInstaller.exe",
+                "version": "4.3.0.5",
+                "thumbprint": "7DC5CC3BB2437C53E6B30BDCAD1B9994C98818A4",
+                "vendor": "SpringTech Ltd."
+            }
+        ]
+    }
+}

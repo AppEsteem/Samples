@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "VerifySeal": {
+      "commandName": "Project",
+      "commandLineArgs": "\"..\\..\\..\\..\\VerifySealUnitTests\\TestFiles\\AbeAppsDW.exe\" -V"
+    }
+  }
+}

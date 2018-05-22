@@ -1,4 +1,4 @@
-# How to Use VerifySeal Tool
+# How to Use the VerifySeal Tool
 
 ## What is the VerifySeal Tool?
 
