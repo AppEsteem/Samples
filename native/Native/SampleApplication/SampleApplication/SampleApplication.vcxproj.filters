@@ -35,13 +35,15 @@
     <ClCompile Include="SampleApplication.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\AESEAL\registration.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="SampleApplication.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AESEAL.json">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
 </Project>
