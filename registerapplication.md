@@ -24,7 +24,7 @@
 
     ![Premium Support](./media/registerApplication_6.png)
 
-4. Request Application Certification. Upload application executables and click the **Next** button
+4. Request Application Certification. Upload application executables, enter Version Change Log and click the **Next** button
 
     ![Certify Application Step 1](./media/registerApplication_8.png)
 
@@ -38,7 +38,7 @@
 
     ![Certify Application Step 3](./media/registerApplication_11.png)
 
-    **NOTE:** At any step of the Request Application Certification, you can click the **Save for later** button. To resume the Certification later you would need to go to the Application List page and click the *Request App Review* link for the correspondent application version.
+    **NOTE:** At any step of the Request Application Certification, you can click the **Save for later** button. To resume the Certification later you would need to go to the Application List page and click the *Submit App for Review* link for the correspondent application version.
 
     ![Application List](./media/registerApplication_13.png)
 
