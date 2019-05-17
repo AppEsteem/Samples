@@ -350,10 +350,10 @@ namespace VerifySeal
                     if (false == found)
                     {
                         isValid &= false;
-                        PrintMessage($"  File '{fileName}' version '{fileVersion}' CompanyName '{companyName}' does not match a file in the seal ... ", "Error", null, ConsoleColor.Red);
+                        PrintMessage($"  File '{fileName}' version '{fileVersion}' CompanyName '{companyName}' Thumbprint '{thumbPrint.ToLower()}' does not match a file in the seal ... ", "Error", null, ConsoleColor.Red);
                     }
                     else
-                        PrintMessage($"  File '{fileName}' version '{fileVersion}' CompanyName '{companyName}' matches a file in the seal ... ", "Ok", null, ConsoleColor.Green);
+                        PrintMessage($"  File '{fileName}' version '{fileVersion}' CompanyName '{companyName}' Thumbprint '{thumbPrint.ToLower()}' matches a file in the seal ... ", "Ok", null, ConsoleColor.Green);
                 }
                 else
                 {
