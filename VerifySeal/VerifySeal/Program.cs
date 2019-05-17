@@ -339,7 +339,7 @@ namespace VerifySeal
                         if ((fileName == name?.ToString()) 
                             && (fileVersion == version?.ToString()) 
                             && ((string.IsNullOrEmpty(companyName) && string.IsNullOrEmpty(vendor?.ToString())) ||(companyName == vendor?.ToString()))
-                            && (string.IsNullOrEmpty(thumbPrint) ||(thumbPrint == thumbprint?.ToString()))
+                            && (string.IsNullOrEmpty(thumbPrint) ||(thumbPrint.ToLower() == thumbprint?.ToString().ToLower()))
                         )
                         {
                             found = true;
