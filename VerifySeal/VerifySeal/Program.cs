@@ -30,7 +30,7 @@ namespace VerifySeal
         public static void Main(string[] args)
         {
             // Print out the program name and copyright information.
-            PrintMessage("\nVerifySeal - Copyright (C) 2018 AppEsteem Corporation. All Rights Reserved.", null, ConsoleColor.DarkYellow);
+            PrintMessage("\nVerifySeal - Copyright (C) 2018-2019 AppEsteem Corporation. All Rights Reserved.", null, ConsoleColor.DarkYellow);
 
             // Parse the arguments, exiting with error if the arguments are not valid.
             if (false == ParseArguments(args, out string filepath))
@@ -43,6 +43,8 @@ namespace VerifySeal
             string _sealJson = null;
             string _fileVersion = null;
             string _fileName = null;
+            string _companyName = null;
+            string _thumbprint = null;
             DateTimeOffset _fileCreation = default(DateTimeOffset);
 
             using (FileStream fs = new FileStream(filepath, FileMode.Open, FileAccess.Read, FileShare.Read))
@@ -57,6 +59,20 @@ namespace VerifySeal
                     _fileCreation = pe.FileCreation;
                     _fileName = pe.FileName;
                     _fileVersion = pe.FileVersion;
+                    _companyName = pe.CompanyName;
+
+                    // get the certificate thumbprint from the file
+                    try
+                    {
+                        X509Certificate fcert = X509Certificate.CreateFromSignedFile(filepath);
+                        _thumbprint = fcert.GetCertHashString();
+                    }
+                    catch(Exception ex)
+                    {
+                        PrintMessage("  Cannot retrieve certificate, but continuing.");
+                        PrintMessage("      exception: " + ex.ToString());
+                        _thumbprint = "";
+                    }
                     
                     Console.WriteLine("File '{0}' was created {1:f}.", _fileName, pe.FileCreation);
                     Console.WriteLine(pe.GetFileTypeMessage());
@@ -95,7 +111,7 @@ namespace VerifySeal
             else
             {
                 // Validate the seal.
-                _sealIsValid = ValidateSeal(_sealJson, _fileCreation, _fileName, _fileVersion);
+                _sealIsValid = ValidateSeal(_sealJson, _fileCreation, _fileName, _fileVersion, _companyName, _thumbprint);
                 if (_sealIsValid)
                     PrintMessage("\nSeal is valid for this file.", null, ConsoleColor.Green);
                 else
@@ -124,7 +140,7 @@ namespace VerifySeal
         /// <param name="fileName">Name of the file from the version info resource.</param>
         /// <param name="fileVersion">Version of the file from the version info resource.</param>
         /// <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
-        internal static bool ValidateSeal(string json, DateTimeOffset creation, string fileName = null, string fileVersion = null)
+        internal static bool ValidateSeal(string json, DateTimeOffset creation, string fileName = null, string fileVersion = null, string companyName = null, string thumbPrint = null)
         {
             // Validate arguments.
             if (string.IsNullOrWhiteSpace(json))
@@ -302,19 +318,29 @@ namespace VerifySeal
                 }
 
                 // -----------------------------------------------------------------------------
-                // Validate that this file is listed in the list of known files if a file name and version were passed.
+                // Validate that this file is listed in the list of known files if a file name and version and company name were passed.
                 // -----------------------------------------------------------------------------
                 JArray contents = root.SelectToken("seal.contents") as JArray;
-                if ((null != contents) && (false == string.IsNullOrWhiteSpace(fileName)) && (false == string.IsNullOrWhiteSpace(fileVersion)))
+                if ((null != contents) 
+                    && (false == string.IsNullOrWhiteSpace(fileName)) 
+                    && (false == string.IsNullOrWhiteSpace(fileVersion))
+                    && (companyName != null) // company name could be empty
+                    )
                 {
                     bool found = false;
                     foreach (var item in contents)
                     {
                         var name = item.SelectToken("name");
                         var version = item.SelectToken("version");
+                        var vendor = item.SelectToken("vendor");
+                        var thumbprint = item.SelectToken("thumbprint");
 
                         // Compare to the name and version of this file
-                        if ((fileName == name?.ToString()) && (fileVersion == version?.ToString()))
+                        if ((fileName == name?.ToString()) 
+                            && (fileVersion == version?.ToString()) 
+                            && ((string.IsNullOrEmpty(companyName) && string.IsNullOrEmpty(vendor?.ToString())) ||(companyName == vendor?.ToString()))
+                            && (string.IsNullOrEmpty(thumbPrint) ||(thumbPrint == thumbprint?.ToString()))
+                        )
                         {
                             found = true;
                             break;
@@ -324,10 +350,10 @@ namespace VerifySeal
                     if (false == found)
                     {
                         isValid &= false;
-                        PrintMessage($"  File '{fileName}' version '{fileVersion}' does not match a file in the seal ... ", "Error", null, ConsoleColor.Red);
+                        PrintMessage($"  File '{fileName}' version '{fileVersion}' CompanyName '{companyName}' does not match a file in the seal ... ", "Error", null, ConsoleColor.Red);
                     }
                     else
-                        PrintMessage($"  File '{fileName}' version '{fileVersion}' matches a file in the seal ... ", "Ok", null, ConsoleColor.Green);
+                        PrintMessage($"  File '{fileName}' version '{fileVersion}' CompanyName '{companyName}' matches a file in the seal ... ", "Ok", null, ConsoleColor.Green);
                 }
                 else
                 {

@@ -19,6 +19,7 @@ namespace VerifySeal
     {
         public readonly string FileName;
         public readonly string FileVersion;
+        public readonly string CompanyName;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="VersionInfo"/> class.
@@ -82,6 +83,7 @@ namespace VerifySeal
             byte[] contents = reader.ReadBytes(wLength - 2);
 
             FileName = SearchForStringValue(contents, "OriginalFilename");
+            CompanyName = SearchForStringValue(contents, "CompanyName");
 
         }
 
@@ -89,6 +91,7 @@ namespace VerifySeal
         {
             FileVersion = SearchForStringValue(content, "FileVersion");
             FileName = SearchForStringValue(content, "OriginalFilename");
+            FileName = SearchForStringValue(content, "CompanyName");
         }
 
         /// <summary>

@@ -66,6 +66,7 @@ namespace VerifySeal
         /// Gets the file version.
         /// </summary>
         public string FileVersion => _versionInfo?.FileVersion;
+        public string CompanyName => _versionInfo?.CompanyName;
 
         /// <summary>
         /// Gets the name of the file.
