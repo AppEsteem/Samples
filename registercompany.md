@@ -6,15 +6,15 @@ This page will guide you through the creation of a company on AppEsteem's custom
 
     ![Company Information Welcome page](./media/registerCompany1.png)
 
-2. Enter the company Name, Website, Phone and Major Brands
+2. Fill in company information and contact fields and click on the **Register** button.
 
     ![Company Registration form](./media/registerCompany2.png)
 
-3. Choose Commitment Level and click the Register button. Upon successful registration you will be navigated to the AppEsteem Portal page.
+3. Upon successful registration you will be navigated to the AppEsteem Portal page.
 
     ![Choosing your Commitment Level ](./media/registerCompany3.png)
 
-4. Next step is to sign the Master Services Agreement. Under Agreements click on the *“Agree to the Master Services Agreement”*
+4. Next step is to sign the Master Services Agreement. Under Agreements click on the **Agree to the Master Services Agreement** link.
 
     ![Signing Agreements](./media/agreeCertificationAgreement_1.png)
 
@@ -22,6 +22,6 @@ This page will guide you through the creation of a company on AppEsteem's custom
 
     ![Sign Sample Agreement](./media/agreeCertificationAgreement_2.png)
 
-6. Upon successfully signing the Master Services Agreement you will see the check mark next to the *"Agree to the Master Services Agreement”* link on the Portal page.
+6. Upon successfully signing the Master Services Agreement you will see the check mark next to the **Agree to the Master Services Agreement** link on the Portal page.
 
     ![Completed Signing Agreements](./media/agreeCertificationAgreement_3.png)
